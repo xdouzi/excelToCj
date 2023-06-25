@@ -34,21 +34,32 @@ func main() {
 }
 func DoSheetTable(f *excelize.File, sheetName string) {
 	// Get value from cell by given worksheet name and cell reference.
-	cell, err := f.GetCellValue(sheetName, "B2")
+	/*
+		cell, err := f.GetCellValue(sheetName, "B2")
+			if err != nil {
+				fmt.Println(err)
+				return
+			}
+			fmt.Println(cell)
+	*/
+	// 读取 Sheet1 中的数据
+	rows, err := f.GetRows(sheetName)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println(cell)
-	// Get all the rows in the Sheet1.
-	rows, err := f.GetRows("Sheet1")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	/**
+	1:规则第一行不要 备注用
+	2:第二行 属性名字 当为空字符串 本列不做数据导入
+	3：第三行 类型默认 int
+	4:属性说明
+	5:属性功能使用说明
+
+	*/
 	for _, row := range rows {
 		for _, colCell := range row {
 			fmt.Print(colCell, "\t")
+
 		}
 		fmt.Println()
 	}
