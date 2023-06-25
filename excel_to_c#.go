@@ -84,6 +84,8 @@ func DoSheetTable(f *excelize.File, sheetName string) {
 				ctype := ctypeList[index]
 				if ctype == "" {
 					ctype = "int"
+				} else {
+					ctype = "string"
 				}
 				WLine("public " + ctype + " " + cname + ";")
 
@@ -132,20 +134,17 @@ func DoSheetTable(f *excelize.File, sheetName string) {
 		}
 		WLine("}")
 
-		//fmt.Println(len(ctypeNameList))
-		//fmt.Println(len(ctypeList))
-
-		// 将配置文件写入文件中
-		err = ioutil.WriteFile("config.ini", []byte(file_content), 0644)
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-
-		fmt.Println("配置文件已生成")
 	}
 	WLine("}")
 
+	// 将配置文件写入文件中
+	err = ioutil.WriteFile(fileName+".cs", []byte(file_content), 0644)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println("配置文件已生成")
 }
 
 // 遍历每一行数据
@@ -153,5 +152,6 @@ var file_content string
 
 func WLine(format string, a ...any) {
 	aline := fmt.Sprintf(format, a...)
+	file_content += aline + "\n"
 
 }
