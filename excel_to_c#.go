@@ -7,6 +7,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 
 	"github.com/xuri/excelize/v2"
 )
@@ -57,26 +58,100 @@ func DoSheetTable(f *excelize.File, sheetName string) {
 
 	*/
 
+	fileName := sheetName
 	var ctypeNameList []string
 	var ctypeList []string
-
+	//
+	var baseInfoName string
+	base_data := ""
+	WLine("using System.Collections.Generic;")
+	WLine("{")
 	for x, row := range rows {
-
 		switch x {
 		case 0:
 		case 1:
 			ctypeNameList = row
 		case 2:
 			ctypeList = row
+			baseInfoName = fileName + "Info"
+			WLine("public class " + baseInfoName)
+			WLine("{")
+			//添加参数
+			for index, cname := range ctypeNameList {
+				if cname == "" {
+					continue
+				}
+				ctype := ctypeList[index]
+				if ctype == "" {
+					ctype = "int"
+				}
+				WLine("public " + ctype + " " + cname + ";")
+
+				_temp := ","
+				//拿到参数串
+				if index == len(ctypeNameList) {
+					_temp = ""
+				}
+				base_data += ctype + " " + cname + _temp
+			}
+			//构建函数  public FileNameInfo()
+
+			WLine("public %s(%s)", baseInfoName, base_data)
+			WLine("{")
+			//参数赋值
+			for index, cname := range ctypeNameList {
+				if cname == "" {
+					continue
+				}
+				ctype := ctypeList[index]
+				if ctype == "" {
+					ctype = "int"
+				}
+				WLine("%s = %s;", cname, cname)
+			}
+			WLine("}")
+
+			WLine("}")
+			//=====================================================
+			WLine("public class cfg_fileName")
+			WLine("{")
+			WLine("public List<%s> list = new List<%s>()", baseInfoName, baseInfoName)
+			WLine("{")
 		case 3:
 		case 4:
 		default:
-			for _, colCell := range row {
-
-				fmt.Print(colCell, "\t")
+			canshuzhi := ""
+			for index, colCell := range row {
+				_t := ","
+				if index == len(ctypeNameList) {
+					_t = ""
+				}
+				canshuzhi += colCell + _t
 			}
+			WLine(" list[%d] = new %s(%s);", x, baseInfoName, canshuzhi)
 		}
-		fmt.Println(len(ctypeNameList))
-		fmt.Println(len(ctypeList))
+		WLine("}")
+
+		//fmt.Println(len(ctypeNameList))
+		//fmt.Println(len(ctypeList))
+
+		// 将配置文件写入文件中
+		err = ioutil.WriteFile("config.ini", []byte(file_content), 0644)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+
+		fmt.Println("配置文件已生成")
 	}
+	WLine("}")
+
+}
+
+// 遍历每一行数据
+var file_content string
+
+func WLine(format string, a ...any) {
+	aline := fmt.Sprintf(format, a...)
+
 }
