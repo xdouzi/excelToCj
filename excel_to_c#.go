@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	f, err := excelize.OpenFile("Book1.xlsx")
+	f, err := excelize.OpenFile("j-奖励表.xlsx")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -23,8 +23,18 @@ func main() {
 			fmt.Println(err)
 		}
 	}()
+	sheetlist := f.GetSheetMap()
+
+	for i := 0; i < len(sheetlist); i++ {
+		sheetName := sheetlist[i+1]
+		fmt.Println(sheetName)
+		DoSheetTable(f, sheetName)
+	}
+
+}
+func DoSheetTable(f *excelize.File, sheetName string) {
 	// Get value from cell by given worksheet name and cell reference.
-	cell, err := f.GetCellValue("Sheet1", "B2")
+	cell, err := f.GetCellValue(sheetName, "B2")
 	if err != nil {
 		fmt.Println(err)
 		return
