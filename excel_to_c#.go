@@ -49,18 +49,34 @@ func DoSheetTable(f *excelize.File, sheetName string) {
 		return
 	}
 	/**
-	1:规则第一行不要 备注用
-	2:第二行 属性名字 当为空字符串 本列不做数据导入
-	3：第三行 类型默认 int
-	4:属性说明
-	5:属性功能使用说明
+	0:规则第一行不要 备注用
+	1:第二行 属性名字 当为空字符串 本列不做数据导入
+	2：第三行 类型默认 int
+	3:属性说明
+	4:属性功能使用说明
 
 	*/
-	for _, row := range rows {
-		for _, colCell := range row {
-			fmt.Print(colCell, "\t")
 
+	var ctypeNameList []string
+	var ctypeList []string
+
+	for x, row := range rows {
+
+		switch x {
+		case 0:
+		case 1:
+			ctypeNameList = row
+		case 2:
+			ctypeList = row
+		case 3:
+		case 4:
+		default:
+			for _, colCell := range row {
+
+				fmt.Print(colCell, "\t")
+			}
 		}
-		fmt.Println()
+		fmt.Println(len(ctypeNameList))
+		fmt.Println(len(ctypeList))
 	}
 }
