@@ -23,6 +23,6 @@ public class Cfg_t_seglevel_s
 {
 public static List<Cfg_t_seglevel_s_Info> list = new List<Cfg_t_seglevel_s_Info>()
 {
-	[0] = new Cfg_t_seglevel_s_Info(1,1,1,1,1,"0,500",50001),
+	[%!d(string=1)] = new Cfg_t_seglevel_s_Info(1,1,1,1,1,"0,500",50001),
 };
 }

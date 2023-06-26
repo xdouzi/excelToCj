@@ -21,11 +21,11 @@ public class Cfg_t_synthesis_s
 {
 public static List<Cfg_t_synthesis_s_Info> list = new List<Cfg_t_synthesis_s_Info>()
 {
-	[0] = new Cfg_t_synthesis_s_Info(1,3001,"","-101,1000;-102,2000","-2,20000","2,14,1"),
-	[1] = new Cfg_t_synthesis_s_Info(2,3002,"","-103,2000;-104,4000","-2,20000","2,14,3"),
-	[2] = new Cfg_t_synthesis_s_Info(3,3003,"","-101,2000;-103,4000","-2,20000","2,14,5"),
-	[3] = new Cfg_t_synthesis_s_Info(4,3004,"","-102,1200;-103,2400","-2,20000","2,14,7"),
-	[4] = new Cfg_t_synthesis_s_Info(5,3005,"","3001,5;3004,10","-2,40000","2,14,9"),
-	[5] = new Cfg_t_synthesis_s_Info(6,3006,"","-103,40000;3005,15","-2,80000","2,14,11"),
+	[%!d(string=1)] = new Cfg_t_synthesis_s_Info(1,3001,"","-101,1000;-102,2000","-2,20000","2,14,1"),
+	[%!d(string=2)] = new Cfg_t_synthesis_s_Info(2,3002,"","-103,2000;-104,4000","-2,20000","2,14,3"),
+	[%!d(string=3)] = new Cfg_t_synthesis_s_Info(3,3003,"","-101,2000;-103,4000","-2,20000","2,14,5"),
+	[%!d(string=4)] = new Cfg_t_synthesis_s_Info(4,3004,"","-102,1200;-103,2400","-2,20000","2,14,7"),
+	[%!d(string=5)] = new Cfg_t_synthesis_s_Info(5,3005,"","3001,5;3004,10","-2,40000","2,14,9"),
+	[%!d(string=6)] = new Cfg_t_synthesis_s_Info(6,3006,"","-103,40000;3005,15","-2,80000","2,14,11"),
 };
 }

@@ -78,14 +78,14 @@ func OpenExcelFile(filePath string) {
 	sheetlist := f.GetSheetMap()
 	t := &ExcelToCx{}
 	t.F = f
-
+	t.ExcelPath = filePath
 	for i := 0; i < len(sheetlist); i++ {
 		sheetName := sheetlist[i+1]
 		if sheetName == "" {
 			continue
 		}
-		if strings.Contains(sheetName, "说明表") {
-			fmt.Printf("包含说明表 %s 不处理\n", sheetName)
+		if strings.Contains(sheetName, "说明") {
+			fmt.Printf("包含说明 %s 不处理\n", sheetName)
 		} else {
 			fmt.Printf("开始导出:%s sheetName= %s\n", f.Path, sheetName)
 			file_content = ""
@@ -104,6 +104,7 @@ type ExcelToCx struct {
 	classBaseName     string
 	classBaseInfoName string
 	baseInfo_data     string
+	ExcelPath         string
 }
 
 func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
@@ -214,12 +215,26 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 		}
 	}
 }
+
+// 第一个参数id A3位置
+func (t *ExcelToCx) GetKeyByListOrDic() bool {
+	ctype := t.GetcTypeName(0)
+	if ctype == "int" {
+		return true
+	}
+	return false
+}
 func (t *ExcelToCx) DocfgClass(rows [][]string) {
 
 	WLine("public class %s", t.classBaseName)
 	WLine("{")
+	isbool := t.GetKeyByListOrDic()
+	if isbool {
+		WLine("public static List<%s> list = new List<%s>()", t.classBaseInfoName, t.classBaseInfoName)
+	} else {
+		WLine("public static Dictionary<string,%s> list = new Dictionary<%s>()", t.classBaseInfoName, t.classBaseInfoName)
+	}
 
-	WLine("public static List<%s> list = new List<%s>()", t.classBaseInfoName, t.classBaseInfoName)
 	WLine("{")
 	for x, row := range rows {
 		if x < 5 {
@@ -260,7 +275,11 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 			canshuzhi += colCell + _t
 		}
 
-		WLine("	[%d] = new %s(%s),", x-5, t.classBaseInfoName, canshuzhi)
+		if isbool {
+			WLine("	[%d] = new %s(%s),", row[0], t.classBaseInfoName, canshuzhi)
+		} else {
+			WLine("	[\"%s\"] = new %s(%s),", row[0], t.classBaseInfoName, canshuzhi)
+		}
 
 		/*
 			if x == 20 {

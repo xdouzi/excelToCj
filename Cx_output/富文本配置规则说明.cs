@@ -11,17 +11,17 @@ public Cfg_富文本配置规则说明_Info(int id,int a_base_message_id,string 
 }
 public class Cfg_富文本配置规则说明
 {
-public static List<Cfg_富文本配置规则说明_Info> list = new List<Cfg_富文本配置规则说明_Info>()
+public static Dictionary<string,Cfg_富文本配置规则说明_Info> list = new Dictionary<Cfg_富文本配置规则说明_Info>()
 {
-	[0] = new Cfg_富文本配置规则说明_Info("3、赛事跳转",""),
-	[1] = new Cfg_富文本配置规则说明_Info("",""),
-	[2] = new Cfg_富文本配置规则说明_Info("",""),
-	[3] = new Cfg_富文本配置规则说明_Info("","赛事{0}【时代 a_base_eratype_title 】{1}【玩法：1V1\2V2\6V6 a_base_patterntype 】{2}【日赛、周赛、月赛a_base_gametypemsgid 】已经结束啦，您的排名为{3}【玩家该赛事的当前排名信息】\n恭喜获得以下奖励\n点击<u><color=#ff0000><link=\"3,53,{4}【赛事id】\">详细结果入口</link></color></u>查看详细信息吧"),
-	[4] = new Cfg_富文本配置规则说明_Info("",""),
-	[5] = new Cfg_富文本配置规则说明_Info("",""),
-	[6] = new Cfg_富文本配置规则说明_Info("",""),
-	[7] = new Cfg_富文本配置规则说明_Info("",""),
-	[8] = new Cfg_富文本配置规则说明_Info("","尊敬的旅行者，非常抱歉\n赛事{0}{1}{2}异常终止\n您的资源已经通过邮件全部返还"),
-	[9] = new Cfg_富文本配置规则说明_Info("","尊敬的旅行者，非常抱歉\n赛事{0}【时代 a_base_eratype_title 】{1}【玩法：1V1\2V2\6V6 a_base_patterntype 】{2}【日赛、周赛、月赛a_base_gametypemsgid 】异常终止\n您的资源已经通过邮件全部返还"),
+	["%!s(int=0)"] = new Cfg_富文本配置规则说明_Info("3、赛事跳转",""),
+	["%!s(int=1)"] = new Cfg_富文本配置规则说明_Info("",""),
+	["%!s(int=2)"] = new Cfg_富文本配置规则说明_Info("",""),
+	["%!s(int=3)"] = new Cfg_富文本配置规则说明_Info("","赛事{0}【时代 a_base_eratype_title 】{1}【玩法：1V1\2V2\6V6 a_base_patterntype 】{2}【日赛、周赛、月赛a_base_gametypemsgid 】已经结束啦，您的排名为{3}【玩家该赛事的当前排名信息】\n恭喜获得以下奖励\n点击<u><color=#ff0000><link=\"3,53,{4}【赛事id】\">详细结果入口</link></color></u>查看详细信息吧"),
+	["%!s(int=4)"] = new Cfg_富文本配置规则说明_Info("",""),
+	["%!s(int=5)"] = new Cfg_富文本配置规则说明_Info("",""),
+	["%!s(int=6)"] = new Cfg_富文本配置规则说明_Info("",""),
+	["%!s(int=7)"] = new Cfg_富文本配置规则说明_Info("",""),
+	["%!s(int=8)"] = new Cfg_富文本配置规则说明_Info("","尊敬的旅行者，非常抱歉\n赛事{0}{1}{2}异常终止\n您的资源已经通过邮件全部返还"),
+	["%!s(int=9)"] = new Cfg_富文本配置规则说明_Info("","尊敬的旅行者，非常抱歉\n赛事{0}【时代 a_base_eratype_title 】{1}【玩法：1V1\2V2\6V6 a_base_patterntype 】{2}【日赛、周赛、月赛a_base_gametypemsgid 】异常终止\n您的资源已经通过邮件全部返还"),
 };
 }

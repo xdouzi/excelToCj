@@ -33,9 +33,9 @@ public class Cfg_t_achievement_server_s
 {
 public static List<Cfg_t_achievement_server_s_Info> list = new List<Cfg_t_achievement_server_s_Info>()
 {
-	[0] = new Cfg_t_achievement_server_s_Info(1,1,0,9001,9101,9201,"","","204,0,0","201,2,5",5210,"1,5,0"),
-	[1] = new Cfg_t_achievement_server_s_Info(2,2,432000,9002,9102,9202,"","","204,1,0","202,1,10",5220,"1,8,0"),
-	[2] = new Cfg_t_achievement_server_s_Info(3,3,432000,9003,9103,9203,"","","204,2,0","202,3,10",5210,"1,9,0"),
-	[3] = new Cfg_t_achievement_server_s_Info(4,4,0,9004,9104,9204,"","","204,3,0","203,110,5",5220,"1,10,0"),
+	[%!d(string=1)] = new Cfg_t_achievement_server_s_Info(1,1,0,9001,9101,9201,"","","204,0,0","201,2,5",5210,"1,5,0"),
+	[%!d(string=2)] = new Cfg_t_achievement_server_s_Info(2,2,432000,9002,9102,9202,"","","204,1,0","202,1,10",5220,"1,8,0"),
+	[%!d(string=3)] = new Cfg_t_achievement_server_s_Info(3,3,432000,9003,9103,9203,"","","204,2,0","202,3,10",5210,"1,9,0"),
+	[%!d(string=4)] = new Cfg_t_achievement_server_s_Info(4,4,0,9004,9104,9204,"","","204,3,0","203,110,5",5220,"1,10,0"),
 };
 }

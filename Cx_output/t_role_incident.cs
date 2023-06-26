@@ -23,7 +23,7 @@ public class Cfg_t_role_incident
 {
 public static List<Cfg_t_role_incident_Info> list = new List<Cfg_t_role_incident_Info>()
 {
-	[0] = new Cfg_t_role_incident_Info(1,1,"",,,"",),
-	[1] = new Cfg_t_role_incident_Info(2,2,"",,,"",),
+	[%!d(string=1)] = new Cfg_t_role_incident_Info(1,1,"",,,"",),
+	[%!d(string=2)] = new Cfg_t_role_incident_Info(2,2,"",,,"",),
 };
 }
