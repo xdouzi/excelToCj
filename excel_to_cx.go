@@ -228,12 +228,9 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 
 	WLine("public class %s", t.classBaseName)
 	WLine("{")
-	isbool := t.GetKeyByListOrDic()
-	if isbool {
-		WLine("public static List<%s> list = new List<%s>()", t.classBaseInfoName, t.classBaseInfoName)
-	} else {
-		WLine("public static Dictionary<string,%s> list = new Dictionary<%s>()", t.classBaseInfoName, t.classBaseInfoName)
-	}
+	//isbool := t.GetKeyByListOrDic()
+	//WLine("public static List<%s> list = new List<%s>()", t.classBaseInfoName, t.classBaseInfoName)
+	WLine("public static Dictionary<string,%s> list = new Dictionary<string,%s>()", t.classBaseInfoName, t.classBaseInfoName)
 
 	WLine("{")
 	for x, row := range rows {
@@ -275,11 +272,7 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 			canshuzhi += colCell + _t
 		}
 
-		if isbool {
-			WLine("	[%d] = new %s(%s),", row[0], t.classBaseInfoName, canshuzhi)
-		} else {
-			WLine("	[\"%s\"] = new %s(%s),", row[0], t.classBaseInfoName, canshuzhi)
-		}
+		WLine("	[\"%s\"] = new %s(%s),", row[0], t.classBaseInfoName, canshuzhi)
 
 		/*
 			if x == 20 {

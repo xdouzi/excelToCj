@@ -15,8 +15,8 @@ public Cfg_t_timeline_Info(int id,int a_base_plot_ground_id,string a_ints_aggreg
 }
 public class Cfg_t_timeline
 {
-public static List<Cfg_t_timeline_Info> list = new List<Cfg_t_timeline_Info>()
+public static Dictionary<string,Cfg_t_timeline_Info> list = new Dictionary<string,Cfg_t_timeline_Info>()
 {
-	[0] = new Cfg_t_timeline_Info(1,100001,"",1500),
+	["1"] = new Cfg_t_timeline_Info(1,100001,"",1500),
 };
 }
