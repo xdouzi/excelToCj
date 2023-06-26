@@ -226,9 +226,11 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 
 		WLine("	[%d] = new %s(%s),", x-5, t.baseInfoName, canshuzhi)
 
-		if x == 20 {
-			break
-		}
+		/*
+			if x == 20 {
+				break
+			}
+		*/
 
 	}
 	WLine("};")
