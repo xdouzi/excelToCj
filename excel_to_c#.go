@@ -115,14 +115,19 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 	t.DoBaseInfo(rows)
 	t.DocfgClass(rows)
 
+	t.SaveCxFile()
+}
+func (t *ExcelToCx) SaveCxFile() {
+	outputFile := fmt.Sprintf("./Cx_output/%s.cs", t.fileName)
 	// 将配置文件写入文件中
-	err = ioutil.WriteFile(t.fileName+".cs", []byte(file_content), 0644)
+	err := ioutil.WriteFile(outputFile, []byte(file_content), 0644)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	fmt.Println("配置文件已生成")
+	fmt.Println("配置文件已生成", outputFile)
+	file_content = ""
 }
 
 func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
