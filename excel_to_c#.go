@@ -115,7 +115,7 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 
 				_temp := ","
 				//拿到参数串
-				if index == len(t.ctypeNameList) {
+				if index == len(t.ctypeNameList)-1 {
 					_temp = ""
 				}
 				t.baseInfo_data += ctype + " " + cname + _temp
@@ -134,7 +134,7 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 				if ctype == "" {
 					ctype = "int"
 				}
-				WLine("%s = %s;", cname, cname)
+				WLine("  this.%s = %s;", cname, cname)
 			}
 			WLine("}")
 
@@ -151,11 +151,11 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 	   {
 	   }
 	*/
-	WLine("public static class Cfg_%s", t.fileName)
+	WLine("public class Cfg_%s", t.fileName)
 	WLine("{")
 
-	WLine("public List<%s> list = new List<%s>();", t.baseInfoName, t.baseInfoName)
-	WLine("public Cfg_%s()", t.fileName)
+	WLine("public static List<%s> list = new List<%s>()", t.baseInfoName, t.baseInfoName)
+	//WLine("public Cfg_%s()", t.fileName)
 	WLine("{")
 	for x, row := range rows {
 		if x < 5 {
@@ -181,20 +181,20 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 				colCell = row[index]
 			}
 
-			if index == len(t.ctypeNameList) {
+			if index == len(t.ctypeNameList)-1 {
 				_t = ""
 			}
 			canshuzhi += colCell + _t
 		}
 
-		WLine(" list[%d] = new %s(%s);", x-5, t.baseInfoName, canshuzhi)
+		WLine("	[%d] = new %s(%s),", x-5, t.baseInfoName, canshuzhi)
 
-		/*if x == 50 {
+		if x == 20 {
 			break
 		}
-		*/
+
 	}
-	WLine("}")
+	WLine("};")
 
 	WLine("}")
 }
