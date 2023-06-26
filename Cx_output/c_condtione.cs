@@ -63,7 +63,7 @@ public static List<Cfg_c_condtione_Info> list = new List<Cfg_c_condtione_Info>()
 	[43] = new Cfg_c_condtione_Info(44,204,"GlobalServerTimeAfterDay",520204),
 	[44] = new Cfg_c_condtione_Info(45,301,"FirstRecharge",520301),
 	[45] = new Cfg_c_condtione_Info(46,302,"DepositActivation",520302),
-	[46] = new Cfg_c_condtione_Info(47,303,"",""),
-	[47] = new Cfg_c_condtione_Info(48,304,"",""),
+	[46] = new Cfg_c_condtione_Info(47,303,"",),
+	[47] = new Cfg_c_condtione_Info(48,304,"",),
 };
 }

@@ -27,7 +27,7 @@ public class Cfg_t_soldirtype_s
 {
 public static List<Cfg_t_soldirtype_s_Info> list = new List<Cfg_t_soldirtype_s_Info>()
 {
-	[0] = new Cfg_t_soldirtype_s_Info(1,101,1,1,1,1,10000,0,0),
+	[0] = new Cfg_t_soldirtype_s_Info(1,101,1,1,1,1,10000,0,),
 	[1] = new Cfg_t_soldirtype_s_Info(2,201,2,1,3,1,3000,0,210),
 	[2] = new Cfg_t_soldirtype_s_Info(3,202,2,2,3,1,5000,3,220),
 	[3] = new Cfg_t_soldirtype_s_Info(4,203,2,3,3,1,10000,3,230),

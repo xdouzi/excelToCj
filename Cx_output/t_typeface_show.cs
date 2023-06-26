@@ -21,8 +21,8 @@ public class Cfg_t_typeface_show
 {
 public static List<Cfg_t_typeface_show_Info> list = new List<Cfg_t_typeface_show_Info>()
 {
-	[0] = new Cfg_t_typeface_show_Info(1,-1,"","","",""),
-	[1] = new Cfg_t_typeface_show_Info(2,1,"","","",""),
-	[2] = new Cfg_t_typeface_show_Info(3,2,"","","",""),
+	[0] = new Cfg_t_typeface_show_Info(1,-1,"","",,),
+	[1] = new Cfg_t_typeface_show_Info(2,1,"","",,),
+	[2] = new Cfg_t_typeface_show_Info(3,2,"","",,),
 };
 }
