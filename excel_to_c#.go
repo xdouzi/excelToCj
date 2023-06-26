@@ -85,8 +85,8 @@ type ExcelToCx struct {
 	ctypeNameList []string
 	ctypeList     []string
 
-	baseInfoName  string
-	baseInfo_data string
+	classBaseInfoName string
+	baseInfo_data     string
 }
 
 func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
@@ -157,8 +157,8 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 			t.ctypeNameList = row
 		case 2:
 			t.ctypeList = row
-			t.baseInfoName = t.fileName + "Info"
-			WLine("public class " + t.baseInfoName)
+			t.classBaseInfoName = fmt.Sprintf("Cfg_%s_Info", t.fileName)
+			WLine("public class " + t.classBaseInfoName)
 			WLine("{")
 			//添加参数
 			for index, cname := range t.ctypeNameList {
@@ -183,7 +183,7 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 
 			//构建函数  public FileNameInfo()
 
-			WLine("public %s(%s)", t.baseInfoName, t.baseInfo_data)
+			WLine("public %s(%s)", t.classBaseInfoName, t.baseInfo_data)
 			WLine("{")
 			//参数赋值
 			for index, cname := range t.ctypeNameList {
@@ -215,7 +215,7 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 	WLine("public class Cfg_%s", t.fileName)
 	WLine("{")
 
-	WLine("public static List<%s> list = new List<%s>()", t.baseInfoName, t.baseInfoName)
+	WLine("public static List<%s> list = new List<%s>()", t.classBaseInfoName, t.classBaseInfoName)
 	//WLine("public Cfg_%s()", t.fileName)
 	WLine("{")
 	for x, row := range rows {
@@ -253,7 +253,7 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 			canshuzhi += colCell + _t
 		}
 
-		WLine("	[%d] = new %s(%s),", x-5, t.baseInfoName, canshuzhi)
+		WLine("	[%d] = new %s(%s),", x-5, t.classBaseInfoName, canshuzhi)
 
 		/*
 			if x == 20 {

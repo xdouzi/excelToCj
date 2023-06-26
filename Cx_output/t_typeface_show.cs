@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-public class t_typeface_showInfo
+public class Cfg_t_typeface_show_Info
 {
 public int id;
 public int a_base_show_id;
@@ -7,7 +7,7 @@ public string a_base_typeface;
 public string a_base_point;
 public int a_base_speed;
 public int a_base_time;
-public t_typeface_showInfo(int id,int a_base_show_id,string a_base_typeface,string a_base_point,int a_base_speed,int a_base_time)
+public Cfg_t_typeface_show_Info(int id,int a_base_show_id,string a_base_typeface,string a_base_point,int a_base_speed,int a_base_time)
 {
   this.id = id;
   this.a_base_show_id = a_base_show_id;
@@ -19,10 +19,10 @@ public t_typeface_showInfo(int id,int a_base_show_id,string a_base_typeface,stri
 }
 public class Cfg_t_typeface_show
 {
-public static List<t_typeface_showInfo> list = new List<t_typeface_showInfo>()
+public static List<Cfg_t_typeface_show_Info> list = new List<Cfg_t_typeface_show_Info>()
 {
-	[0] = new t_typeface_showInfo(1,-1,"","","",""),
-	[1] = new t_typeface_showInfo(2,1,"","","",""),
-	[2] = new t_typeface_showInfo(3,2,"","","",""),
+	[0] = new Cfg_t_typeface_show_Info(1,-1,"","","",""),
+	[1] = new Cfg_t_typeface_show_Info(2,1,"","","",""),
+	[2] = new Cfg_t_typeface_show_Info(3,2,"","","",""),
 };
 }

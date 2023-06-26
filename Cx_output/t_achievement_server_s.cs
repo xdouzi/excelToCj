@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-public class t_achievement_server_sInfo
+public class Cfg_t_achievement_server_s_Info
 {
 public int id;
 public int a_base_achievement_id;
@@ -13,7 +13,7 @@ public string a_arrayints_unlock;
 public string a_arrayints_complete;
 public int a_base_award;
 public string a_arrayints_claim;
-public t_achievement_server_sInfo(int id,int a_base_achievement_id,int a_base_receive,int c_base_name,int c_base_border,string c_base_icon,string a_arrayints_unlock,string a_arrayints_complete,string a_base_next_task,int a_base_awardint id,int a_base_achievement_id,int a_base_duration,int c_base_name,int c_base_explain,int c_base_explain_text,string c_base_icon,string c_base_image,string a_arrayints_unlock,string a_arrayints_complete,int a_base_award,string a_arrayints_claim)
+public Cfg_t_achievement_server_s_Info(int id,int a_base_achievement_id,int a_base_receive,int c_base_name,int c_base_border,string c_base_icon,string a_arrayints_unlock,string a_arrayints_complete,string a_base_next_task,int a_base_awardint id,int a_base_achievement_id,int a_base_duration,int c_base_name,int c_base_explain,int c_base_explain_text,string c_base_icon,string c_base_image,string a_arrayints_unlock,string a_arrayints_complete,int a_base_award,string a_arrayints_claim)
 {
   this.id = id;
   this.a_base_achievement_id = a_base_achievement_id;
@@ -31,11 +31,11 @@ public t_achievement_server_sInfo(int id,int a_base_achievement_id,int a_base_re
 }
 public class Cfg_t_achievement_server_s
 {
-public static List<t_achievement_server_sInfo> list = new List<t_achievement_server_sInfo>()
+public static List<Cfg_t_achievement_server_s_Info> list = new List<Cfg_t_achievement_server_s_Info>()
 {
-	[0] = new t_achievement_server_sInfo(1,1,0,9001,9101,9201,"","","204,0,0","201,2,5",5210,"1,5,0"),
-	[1] = new t_achievement_server_sInfo(2,2,432000,9002,9102,9202,"","","204,1,0","202,1,10",5220,"1,8,0"),
-	[2] = new t_achievement_server_sInfo(3,3,432000,9003,9103,9203,"","","204,2,0","202,3,10",5210,"1,9,0"),
-	[3] = new t_achievement_server_sInfo(4,4,0,9004,9104,9204,"","","204,3,0","203,110,5",5220,"1,10,0"),
+	[0] = new Cfg_t_achievement_server_s_Info(1,1,0,9001,9101,9201,"","","204,0,0","201,2,5",5210,"1,5,0"),
+	[1] = new Cfg_t_achievement_server_s_Info(2,2,432000,9002,9102,9202,"","","204,1,0","202,1,10",5220,"1,8,0"),
+	[2] = new Cfg_t_achievement_server_s_Info(3,3,432000,9003,9103,9203,"","","204,2,0","202,3,10",5210,"1,9,0"),
+	[3] = new Cfg_t_achievement_server_s_Info(4,4,0,9004,9104,9204,"","","204,3,0","203,110,5",5220,"1,10,0"),
 };
 }

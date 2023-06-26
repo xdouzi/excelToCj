@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-public class t_seglevel_sInfo
+public class Cfg_t_seglevel_s_Info
 {
 public int a_base_key_id;
 public int a_base_seglevelconfig_id;
@@ -8,7 +8,7 @@ public int a_base_mode;
 public int a_base_seglevel;
 public string a_ints_score_range;
 public int c_base_iconres;
-public t_seglevel_sInfo(int a_base_key_id,int a_base_seglevelconfig_id,int a_base_ear,int a_base_mode,int a_base_seglevel,string a_ints_score_range,int c_base_iconres)
+public Cfg_t_seglevel_s_Info(int a_base_key_id,int a_base_seglevelconfig_id,int a_base_ear,int a_base_mode,int a_base_seglevel,string a_ints_score_range,int c_base_iconres)
 {
   this.a_base_key_id = a_base_key_id;
   this.a_base_seglevelconfig_id = a_base_seglevelconfig_id;
@@ -21,8 +21,8 @@ public t_seglevel_sInfo(int a_base_key_id,int a_base_seglevelconfig_id,int a_bas
 }
 public class Cfg_t_seglevel_s
 {
-public static List<t_seglevel_sInfo> list = new List<t_seglevel_sInfo>()
+public static List<Cfg_t_seglevel_s_Info> list = new List<Cfg_t_seglevel_s_Info>()
 {
-	[0] = new t_seglevel_sInfo(1,1,1,1,1,"0,500",50001),
+	[0] = new Cfg_t_seglevel_s_Info(1,1,1,1,1,"0,500",50001),
 };
 }
