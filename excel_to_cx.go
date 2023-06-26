@@ -103,10 +103,11 @@ func OpenExcelFile(filePath string) {
 }
 
 type ExcelToCx struct {
-	F             *excelize.File
-	fileName      string
-	ctypeNameList []string
-	ctypeList     []string
+	F                   *excelize.File
+	fileName            string   //文件名字
+	ctypeNameList       []string //参数名字
+	ctypeList           []string //类型
+	ctypeAnnotationList []string //注释
 
 	classBaseName     string
 	classBaseInfoName string
@@ -140,7 +141,7 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 	*/
 
 	t.fileName = sheetName
-	t.classBaseName = fmt.Sprintf("Cfg_%s", t.fileName)
+	t.classBaseName = fmt.Sprintf("cfg_%s", t.fileName)
 
 	WLine("using System.Collections.Generic;")
 
@@ -152,6 +153,8 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 
 func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 	//基本信息
+	t.classBaseInfoName = fmt.Sprintf("%sItem", t.fileName)
+
 	for x, row := range rows {
 		switch x {
 		case 0:
@@ -159,7 +162,10 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 			t.ctypeNameList = row
 		case 2:
 			t.ctypeList = row
-			t.classBaseInfoName = fmt.Sprintf("Cfg_%s_Info", t.fileName)
+		case 3:
+			t.ctypeAnnotationList = row
+		case 4:
+
 			WLine("public class " + t.classBaseInfoName)
 			WLine("{")
 			//添加参数
@@ -168,7 +174,9 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 					continue
 				}
 				ctype := t.GetcTypeName(index)
-				WLine("	public " + ctype + " " + cname + ";")
+				zhushi := t.GetcTypeAnnotation(index)
+
+				WLine("	public %s %s;//%s", ctype, cname, zhushi)
 
 				_temp := ","
 				//拿到参数串
@@ -284,6 +292,15 @@ func (t *ExcelToCx) GetcTypeName(index int) string {
 	}
 
 	return ctype
+}
+
+// 获取注释
+func (t *ExcelToCx) GetcTypeAnnotation(index int) string {
+	zhushi := ""
+	if index < len(t.ctypeAnnotationList) {
+		zhushi = t.ctypeAnnotationList[index]
+	}
+	return zhushi
 }
 
 func (t *ExcelToCx) GetcTypeValue(index int) string {

@@ -1,15 +1,15 @@
 using System.Collections.Generic;
-public class Cfg_roleInfo_Info
+public class roleInfoItem
 {
-	public int id;
-	public string name;
-	public string model;
-	public string icon;
-	public int hp;
-	public int roundSpeed;
-	public float walkSpeed;
-	public int runSpeed;
-public Cfg_roleInfo_Info(int id,string name,string model,string icon,int hp,int roundSpeed,float walkSpeed,int runSpeed)
+	public int id;//ID:1~999999
+	public string name;//角色名
+	public string model;//模型配置路径
+	public string icon;//图标名
+	public int hp;//初始血量
+	public int roundSpeed;//转身速度
+	public float walkSpeed;//行走速度
+	public int runSpeed;//跑步速度
+public roleInfoItem(int id,string name,string model,string icon,int hp,int roundSpeed,float walkSpeed,int runSpeed)
 {
   this.id = id;
   this.name = name;
@@ -21,15 +21,15 @@ public Cfg_roleInfo_Info(int id,string name,string model,string icon,int hp,int 
   this.runSpeed = runSpeed;
 }
 }
-public class Cfg_roleInfo
+public class cfg_roleInfo
 {
-public static Dictionary<string,Cfg_roleInfo_Info> list = new Dictionary<string,Cfg_roleInfo_Info>()
+public static Dictionary<string,roleInfoItem> list = new Dictionary<string,roleInfoItem>()
 {
-	["1"] = new Cfg_roleInfo_Info(1,"任务","","46_11100033",100,10,0.8f,2),
-	["2"] = new Cfg_roleInfo_Info(2,"时间","Fighter","46_11100033",100,10,0.8f,2),
-	["3"] = new Cfg_roleInfo_Info(3,"第A点","Fighter","46_11100033",100,10,0.8f,2),
-	["200"] = new Cfg_roleInfo_Info(200,"wawa","Fighter","46_11100033",0,0,0f,0),
-	["300"] = new Cfg_roleInfo_Info(300,"biuniu","Fighter","46_11100033",0,0,0f,0),
-	["55"] = new Cfg_roleInfo_Info(55,"","","",0,0,0.8f,0),
+	["1"] = new roleInfoItem(1,"任务","","46_11100033",100,10,0.8f,2),
+	["2"] = new roleInfoItem(2,"时间","Fighter","46_11100033",100,10,0.8f,2),
+	["3"] = new roleInfoItem(3,"第A点","Fighter","46_11100033",100,10,0.8f,2),
+	["200"] = new roleInfoItem(200,"wawa","Fighter","46_11100033",0,0,0f,0),
+	["300"] = new roleInfoItem(300,"biuniu","Fighter","46_11100033",0,0,0f,0),
+	["55"] = new roleInfoItem(55,"","","",0,0,0.8f,0),
 };
 }
