@@ -149,30 +149,6 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 
 	t.SaveCxFile()
 }
-func (t *ExcelToCx) SaveCxFile() {
-	dirPath := "./Cx_output"
-	// 检查文件夹是否存在
-	if _, err := os.Stat(dirPath); os.IsNotExist(err) {
-		// 如果不存在则创建文件夹
-		err := os.MkdirAll(dirPath, os.ModePerm)
-		if err != nil {
-			fmt.Println("Failed to create directory:", err)
-			return
-		}
-		fmt.Println("Directory created successfully!")
-	}
-
-	outputFile := fmt.Sprintf("./Cx_output/%s.cs", t.fileName)
-	// 将配置文件写入文件中
-	err := ioutil.WriteFile(outputFile, []byte(file_content), 0644)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("配置文件已生成", outputFile)
-	file_content = ""
-}
 
 func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 	//基本信息
@@ -235,8 +211,6 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 
 	WLine("public class %s", t.classBaseName)
 	WLine("{")
-	//isbool := t.GetKeyByListOrDic()
-	//WLine("public static List<%s> list = new List<%s>()", t.classBaseInfoName, t.classBaseInfoName)
 	WLine("public static Dictionary<string,%s> list = new Dictionary<string,%s>()", t.classBaseInfoName, t.classBaseInfoName)
 
 	WLine("{")
@@ -245,8 +219,6 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 			continue
 		}
 		canshuzhi := ""
-		//for index, colCell := range row {
-
 		_t := ","
 		//添加参数
 		for index, cname := range t.ctypeNameList {
@@ -263,9 +235,13 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 				}
 			} else {
 				if index > len(row)-1 {
-					//不处理
+					//没有值根据类型 给默认值
+					colCell = t.GetcTypeValue(index)
 				} else {
 					colCell = row[index]
+					if colCell == "" {
+						colCell = t.GetcTypeValue(index)
+					}
 					if ctype == "float" {
 						colCell = row[index] + "f"
 					}
@@ -312,15 +288,45 @@ func (t *ExcelToCx) GetcTypeName(index int) string {
 
 func (t *ExcelToCx) GetcTypeValue(index int) string {
 	//返回值
-	ctype := ""
-	if index < len(t.ctypeList) {
-		ctype = t.ctypeList[index]
+	ctype := t.GetcTypeName(index)
+	switch ctype {
+	case "int":
+		return "0"
+	case "float":
+		return "0f"
+	case "string":
+		return "\"\""
+	default:
+		return "\"\""
 	}
 	//float
 	return ctype
 }
 
-//float
+func (t *ExcelToCx) SaveCxFile() {
+	dirPath := "./Cx_output"
+	// 检查文件夹是否存在
+	if _, err := os.Stat(dirPath); os.IsNotExist(err) {
+		// 如果不存在则创建文件夹
+		err := os.MkdirAll(dirPath, os.ModePerm)
+		if err != nil {
+			fmt.Println("Failed to create directory:", err)
+			return
+		}
+		fmt.Println("Directory created successfully!")
+	}
+
+	outputFile := fmt.Sprintf("./Cx_output/%s.cs", t.fileName)
+	// 将配置文件写入文件中
+	err := ioutil.WriteFile(outputFile, []byte(file_content), 0644)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println("配置文件已生成", outputFile)
+	file_content = ""
+}
 
 // 遍历每一行数据
 var file_content string

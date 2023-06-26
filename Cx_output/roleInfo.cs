@@ -28,7 +28,8 @@ public static Dictionary<string,Cfg_roleInfo_Info> list = new Dictionary<string,
 	["1"] = new Cfg_roleInfo_Info(1,"任务","","46_11100033",100,10,0.8f,2),
 	["2"] = new Cfg_roleInfo_Info(2,"时间","Fighter","46_11100033",100,10,0.8f,2),
 	["3"] = new Cfg_roleInfo_Info(3,"第A点","Fighter","46_11100033",100,10,0.8f,2),
-	["200"] = new Cfg_roleInfo_Info(200,"wawa","Fighter","46_11100033",,,,),
-	["300"] = new Cfg_roleInfo_Info(300,"biuniu","Fighter","46_11100033",,,,),
+	["200"] = new Cfg_roleInfo_Info(200,"wawa","Fighter","46_11100033",0,0,0f,0),
+	["300"] = new Cfg_roleInfo_Info(300,"biuniu","Fighter","46_11100033",0,0,0f,0),
+	["55"] = new Cfg_roleInfo_Info(55,"","","",0,0,0.8f,0),
 };
 }
