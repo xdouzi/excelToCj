@@ -67,9 +67,10 @@ func OpenExcelFile(filePath string) {
 
 	for i := 0; i < len(sheetlist); i++ {
 		sheetName := sheetlist[i+1]
-		fmt.Println(sheetName)
+		fmt.Println("开始导出:" + sheetName)
 		file_content = ""
 		t.DoSheetTable(f, sheetName)
+
 	}
 }
 
