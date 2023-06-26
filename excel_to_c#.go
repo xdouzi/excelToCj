@@ -10,6 +10,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/xuri/excelize/v2"
 )
@@ -67,9 +68,13 @@ func OpenExcelFile(filePath string) {
 
 	for i := 0; i < len(sheetlist); i++ {
 		sheetName := sheetlist[i+1]
-		fmt.Println("开始导出:" + sheetName)
-		file_content = ""
-		t.DoSheetTable(f, sheetName)
+		if strings.Contains(sheetName, "说明表") {
+			fmt.Println("包含说明表 %s 不处理", sheetName)
+		} else {
+			fmt.Println("开始导出:" + sheetName)
+			file_content = ""
+			t.DoSheetTable(f, sheetName)
+		}
 
 	}
 }
@@ -160,7 +165,11 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 				if cname == "" {
 					continue
 				}
-				ctype := t.ctypeList[index]
+				ctype := ""
+				if index < len(t.ctypeList) {
+					ctype = t.ctypeList[index]
+				}
+
 				if ctype == "" {
 					ctype = "int"
 				} else {
@@ -185,7 +194,11 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 				if cname == "" {
 					continue
 				}
-				ctype := t.ctypeList[index]
+				ctype := ""
+				if index < len(t.ctypeList) {
+					ctype = t.ctypeList[index]
+				}
+
 				if ctype == "" {
 					ctype = "int"
 				}
@@ -225,7 +238,10 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 			if cname == "" {
 				continue
 			}
-			ctype := t.ctypeList[index]
+			ctype := ""
+			if index < len(t.ctypeList) {
+				ctype = t.ctypeList[index]
+			}
 			if ctype != "" {
 				if index > len(row)-1 {
 					colCell = fmt.Sprintf("\"\"")
@@ -233,7 +249,12 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 					colCell = fmt.Sprintf("\"%s\"", row[index])
 				}
 			} else {
-				colCell = row[index]
+				if index > len(row)-1 {
+					//不处理
+				} else {
+					colCell = row[index]
+				}
+
 			}
 
 			if index == len(t.ctypeNameList)-1 {
