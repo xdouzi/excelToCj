@@ -165,11 +165,7 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 				if cname == "" {
 					continue
 				}
-				ctype := ""
-				if index < len(t.ctypeList) {
-					ctype = t.ctypeList[index]
-				}
-
+				ctype := t.GetcType(index)
 				if ctype == "" {
 					ctype = "int"
 				} else {
@@ -194,10 +190,7 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 				if cname == "" {
 					continue
 				}
-				ctype := ""
-				if index < len(t.ctypeList) {
-					ctype = t.ctypeList[index]
-				}
+				ctype := t.GetcType(index)
 
 				if ctype == "" {
 					ctype = "int"
@@ -238,10 +231,7 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 			if cname == "" {
 				continue
 			}
-			ctype := ""
-			if index < len(t.ctypeList) {
-				ctype = t.ctypeList[index]
-			}
+			ctype := t.GetcType(index)
 			if ctype != "" {
 				if index > len(row)-1 {
 					colCell = fmt.Sprintf("\"\"")
@@ -275,6 +265,13 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 	WLine("};")
 
 	WLine("}")
+}
+func (t *ExcelToCx) GetcType(index int) string {
+	ctype := ""
+	if index < len(t.ctypeList) {
+		ctype = t.ctypeList[index]
+	}
+	return ctype
 }
 
 // 遍历每一行数据
