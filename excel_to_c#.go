@@ -159,6 +159,9 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 
 	WLine("public List<%s> list = new List<%s>();", t.baseInfoName, t.baseInfoName)
 	for x, row := range rows {
+		if x <= 4 {
+			continue
+		}
 		canshuzhi := ""
 		for index, colCell := range row {
 			_t := ","
@@ -167,7 +170,7 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 			}
 			canshuzhi += colCell + _t
 		}
-		WLine(" list[%d] = new %s(%s);", x, t.baseInfoName, canshuzhi)
+		WLine(" list[%d] = new %s(%s);", x-5, t.baseInfoName, canshuzhi)
 	}
 	WLine("}")
 }
