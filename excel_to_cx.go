@@ -42,6 +42,13 @@ func main() {
 		return
 	}
 
+	fmt.Printf("----------*.xlsx生成规则--------------------\n")
+	fmt.Printf("--第一行 字段属性为 默认空:客户端和服务端使用;c:只有客户端用;s:只有服务端使用;\n")
+	fmt.Printf("--第二行 字段属性名字 如果为空字符串这个列将不生成配置\n")
+	fmt.Printf("--第三行 字段类型 如果为空 将默认为int,其它类型有 string,float\n")
+	fmt.Printf("--第四行 字段介绍名称\n")
+	fmt.Printf("--第五行 字段属性用法介绍\n")
+	fmt.Printf("--第六行 配置第一行数据开始\n")
 	for _, fileName := range fileNames {
 		if filepath.Ext(fileName) == ".xlsx" {
 			filePath := filepath.Join(dirPath, fileName)
