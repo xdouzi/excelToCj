@@ -31,6 +31,7 @@ func main() {
 	for i := 0; i < len(sheetlist); i++ {
 		sheetName := sheetlist[i+1]
 		fmt.Println(sheetName)
+		file_content = ""
 		t.DoSheetTable(f, sheetName)
 	}
 
