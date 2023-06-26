@@ -74,12 +74,9 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 	t.fileName = sheetName
 
 	WLine("using System.Collections.Generic;")
-	WLine("{")
 
 	t.DoBaseInfo(rows)
 	t.DocfgClass(rows)
-
-	WLine("}")
 
 	// 将配置文件写入文件中
 	err = ioutil.WriteFile(t.fileName+".cs", []byte(file_content), 0644)
@@ -159,17 +156,35 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 
 	WLine("public List<%s> list = new List<%s>();", t.baseInfoName, t.baseInfoName)
 	for x, row := range rows {
-		if x <= 4 {
+		if x < 5 {
 			continue
 		}
 		canshuzhi := ""
-		for index, colCell := range row {
-			_t := ","
+		//for index, colCell := range row {
+		colCell := ""
+		_t := ","
+		//添加参数
+		for index, cname := range t.ctypeNameList {
+			if cname == "" {
+				continue
+			}
+			ctype := t.ctypeList[index]
+			if ctype != "" {
+				if index > len(row)-1 {
+					colCell = fmt.Sprintf("''")
+				} else {
+					colCell = fmt.Sprintf("'%s'", row[index])
+				}
+			} else {
+				colCell = row[index]
+			}
+
 			if index == len(t.ctypeNameList) {
 				_t = ""
 			}
 			canshuzhi += colCell + _t
 		}
+
 		WLine(" list[%d] = new %s(%s);", x-5, t.baseInfoName, canshuzhi)
 	}
 	WLine("}")
