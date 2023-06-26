@@ -155,6 +155,8 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 	WLine("{")
 
 	WLine("public List<%s> list = new List<%s>();", t.baseInfoName, t.baseInfoName)
+	WLine("public Cfg_%s()", t.fileName)
+	WLine("{")
 	for x, row := range rows {
 		if x < 5 {
 			continue
@@ -171,9 +173,9 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 			ctype := t.ctypeList[index]
 			if ctype != "" {
 				if index > len(row)-1 {
-					colCell = fmt.Sprintf("''")
+					colCell = fmt.Sprintf("\"\"")
 				} else {
-					colCell = fmt.Sprintf("'%s'", row[index])
+					colCell = fmt.Sprintf("\"%s\"", row[index])
 				}
 			} else {
 				colCell = row[index]
@@ -186,7 +188,14 @@ func (t *ExcelToCx) DocfgClass(rows [][]string) {
 		}
 
 		WLine(" list[%d] = new %s(%s);", x-5, t.baseInfoName, canshuzhi)
+
+		/*if x == 50 {
+			break
+		}
+		*/
 	}
+	WLine("}")
+
 	WLine("}")
 }
 
