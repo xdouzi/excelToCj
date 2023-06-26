@@ -85,6 +85,7 @@ type ExcelToCx struct {
 	ctypeNameList []string
 	ctypeList     []string
 
+	classBaseName     string
 	classBaseInfoName string
 	baseInfo_data     string
 }
@@ -115,6 +116,7 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 	*/
 
 	t.fileName = sheetName
+	t.classBaseName = fmt.Sprintf("Cfg_%s", t.fileName)
 
 	WLine("using System.Collections.Generic;")
 
@@ -207,16 +209,11 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 	}
 }
 func (t *ExcelToCx) DocfgClass(rows [][]string) {
-	/*
-	   public static class Cfg_Test
-	   {
-	   }
-	*/
-	WLine("public class Cfg_%s", t.fileName)
+
+	WLine("public class %s", t.classBaseName)
 	WLine("{")
 
 	WLine("public static List<%s> list = new List<%s>()", t.classBaseInfoName, t.classBaseInfoName)
-	//WLine("public Cfg_%s()", t.fileName)
 	WLine("{")
 	for x, row := range rows {
 		if x < 5 {
