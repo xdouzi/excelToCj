@@ -8,12 +8,49 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
+	"path/filepath"
 
 	"github.com/xuri/excelize/v2"
 )
 
 func main() {
-	f, err := excelize.OpenFile("j-奖励表.xlsx")
+	dirPath := "./excel"
+	// 检查文件夹是否存在
+	if _, err := os.Stat(dirPath); os.IsNotExist(err) {
+		// 如果不存在则创建文件夹
+		err := os.MkdirAll(dirPath, os.ModePerm)
+		if err != nil {
+			fmt.Println("Failed to create directory:", err)
+			return
+		}
+		fmt.Println("Directory created successfully!")
+	}
+
+	files, err := os.Open(dirPath)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer files.Close()
+
+	fileNames, err := files.Readdirnames(0)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	for _, fileName := range fileNames {
+		if filepath.Ext(fileName) == ".xlsx" {
+			filePath := filepath.Join(dirPath, fileName)
+			OpenExcelFile(filePath)
+		}
+	}
+}
+
+func OpenExcelFile(filePath string) {
+	//"j-奖励表.xlsx"
+	f, err := excelize.OpenFile(filePath)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -34,7 +71,6 @@ func main() {
 		file_content = ""
 		t.DoSheetTable(f, sheetName)
 	}
-
 }
 
 type ExcelToCx struct {
