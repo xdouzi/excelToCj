@@ -118,6 +118,18 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 	t.SaveCxFile()
 }
 func (t *ExcelToCx) SaveCxFile() {
+	dirPath := "./Cx_output"
+	// 检查文件夹是否存在
+	if _, err := os.Stat(dirPath); os.IsNotExist(err) {
+		// 如果不存在则创建文件夹
+		err := os.MkdirAll(dirPath, os.ModePerm)
+		if err != nil {
+			fmt.Println("Failed to create directory:", err)
+			return
+		}
+		fmt.Println("Directory created successfully!")
+	}
+
 	outputFile := fmt.Sprintf("./Cx_output/%s.cs", t.fileName)
 	// 将配置文件写入文件中
 	err := ioutil.WriteFile(outputFile, []byte(file_content), 0644)
