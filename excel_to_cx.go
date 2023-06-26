@@ -141,7 +141,7 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 	*/
 
 	t.fileName = sheetName
-	t.classBaseName = fmt.Sprintf("cfg_%s", t.fileName)
+	t.classBaseName = fmt.Sprintf("Cfg_%s", t.fileName)
 
 	WLine("using System.Collections.Generic;")
 
@@ -153,7 +153,7 @@ func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 
 func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 	//基本信息
-	t.classBaseInfoName = fmt.Sprintf("%sItem", t.fileName)
+	t.classBaseInfoName = fmt.Sprintf("Cfg_%s_Item", t.fileName)
 
 	for x, row := range rows {
 		switch x {

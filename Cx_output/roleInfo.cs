@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-public class roleInfoItem
+public class Cfg_RoleInfo_Item
 {
 	public int id;//ID:1~999999
 	public string name;//角色名
@@ -9,7 +9,7 @@ public class roleInfoItem
 	public int roundSpeed;//转身速度
 	public float walkSpeed;//行走速度
 	public int runSpeed;//跑步速度
-public roleInfoItem(int id,string name,string model,string icon,int hp,int roundSpeed,float walkSpeed,int runSpeed)
+public Cfg_RoleInfo_Item(int id,string name,string model,string icon,int hp,int roundSpeed,float walkSpeed,int runSpeed)
 {
   this.id = id;
   this.name = name;
@@ -21,15 +21,15 @@ public roleInfoItem(int id,string name,string model,string icon,int hp,int round
   this.runSpeed = runSpeed;
 }
 }
-public class cfg_roleInfo
+public class Cfg_RoleInfo
 {
-public static Dictionary<string,roleInfoItem> list = new Dictionary<string,roleInfoItem>()
+public static Dictionary<string,Cfg_RoleInfo_Item> list = new Dictionary<string,Cfg_RoleInfo_Item>()
 {
-	["1"] = new roleInfoItem(1,"任务","","46_11100033",100,10,0.8f,2),
-	["2"] = new roleInfoItem(2,"时间","Fighter","46_11100033",100,10,0.8f,2),
-	["3"] = new roleInfoItem(3,"第A点","Fighter","46_11100033",100,10,0.8f,2),
-	["200"] = new roleInfoItem(200,"wawa","Fighter","46_11100033",0,0,0f,0),
-	["300"] = new roleInfoItem(300,"biuniu","Fighter","46_11100033",0,0,0f,0),
-	["55"] = new roleInfoItem(55,"","","",0,0,0.8f,0),
+	["1"] = new Cfg_RoleInfo_Item(1,"任务","","46_11100033",100,10,0.8f,2),
+	["2"] = new Cfg_RoleInfo_Item(2,"时间","Fighter","46_11100033",100,10,0.8f,2),
+	["3"] = new Cfg_RoleInfo_Item(3,"第A点","Fighter","46_11100033",100,10,0.8f,2),
+	["200"] = new Cfg_RoleInfo_Item(200,"wawa","Fighter","46_11100033",0,0,0f,0),
+	["300"] = new Cfg_RoleInfo_Item(300,"biuniu","Fighter","46_11100033",0,0,0f,0),
+	["55"] = new Cfg_RoleInfo_Item(55,"","","",0,0,0.8f,0),
 };
 }
