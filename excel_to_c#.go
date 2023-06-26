@@ -25,15 +25,28 @@ func main() {
 		}
 	}()
 	sheetlist := f.GetSheetMap()
+	t := &ExcelToCx{}
+	t.F = f
 
 	for i := 0; i < len(sheetlist); i++ {
 		sheetName := sheetlist[i+1]
 		fmt.Println(sheetName)
-		DoSheetTable(f, sheetName)
+		t.DoSheetTable(f, sheetName)
 	}
 
 }
-func DoSheetTable(f *excelize.File, sheetName string) {
+
+type ExcelToCx struct {
+	F             *excelize.File
+	fileName      string
+	ctypeNameList []string
+	ctypeList     []string
+
+	baseInfoName  string
+	baseInfo_data string
+}
+
+func (t *ExcelToCx) DoSheetTable(f *excelize.File, sheetName string) {
 	// Get value from cell by given worksheet name and cell reference.
 	/*
 		cell, err := f.GetCellValue(sheetName, "B2")
@@ -58,30 +71,44 @@ func DoSheetTable(f *excelize.File, sheetName string) {
 
 	*/
 
-	fileName := sheetName
-	var ctypeNameList []string
-	var ctypeList []string
-	//
-	var baseInfoName string
-	base_data := ""
+	t.fileName = sheetName
+
 	WLine("using System.Collections.Generic;")
 	WLine("{")
+
+	t.DoBaseInfo(rows)
+	t.DocfgClass(rows)
+
+	WLine("}")
+
+	// 将配置文件写入文件中
+	err = ioutil.WriteFile(t.fileName+".cs", []byte(file_content), 0644)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println("配置文件已生成")
+}
+
+func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
+	//基本信息
 	for x, row := range rows {
 		switch x {
 		case 0:
 		case 1:
-			ctypeNameList = row
+			t.ctypeNameList = row
 		case 2:
-			ctypeList = row
-			baseInfoName = fileName + "Info"
-			WLine("public class " + baseInfoName)
+			t.ctypeList = row
+			t.baseInfoName = t.fileName + "Info"
+			WLine("public class " + t.baseInfoName)
 			WLine("{")
 			//添加参数
-			for index, cname := range ctypeNameList {
+			for index, cname := range t.ctypeNameList {
 				if cname == "" {
 					continue
 				}
-				ctype := ctypeList[index]
+				ctype := t.ctypeList[index]
 				if ctype == "" {
 					ctype = "int"
 				} else {
@@ -91,21 +118,22 @@ func DoSheetTable(f *excelize.File, sheetName string) {
 
 				_temp := ","
 				//拿到参数串
-				if index == len(ctypeNameList) {
+				if index == len(t.ctypeNameList) {
 					_temp = ""
 				}
-				base_data += ctype + " " + cname + _temp
+				t.baseInfo_data += ctype + " " + cname + _temp
 			}
+
 			//构建函数  public FileNameInfo()
 
-			WLine("public %s(%s)", baseInfoName, base_data)
+			WLine("public %s(%s)", t.baseInfoName, t.baseInfo_data)
 			WLine("{")
 			//参数赋值
-			for index, cname := range ctypeNameList {
+			for index, cname := range t.ctypeNameList {
 				if cname == "" {
 					continue
 				}
-				ctype := ctypeList[index]
+				ctype := t.ctypeList[index]
 				if ctype == "" {
 					ctype = "int"
 				}
@@ -115,36 +143,33 @@ func DoSheetTable(f *excelize.File, sheetName string) {
 
 			WLine("}")
 			//=====================================================
-			WLine("public class cfg_fileName")
-			WLine("{")
-			WLine("public List<%s> list = new List<%s>()", baseInfoName, baseInfoName)
-			WLine("{")
-		case 3:
-		case 4:
 		default:
-			canshuzhi := ""
-			for index, colCell := range row {
-				_t := ","
-				if index == len(ctypeNameList) {
-					_t = ""
-				}
-				canshuzhi += colCell + _t
-			}
-			WLine(" list[%d] = new %s(%s);", x, baseInfoName, canshuzhi)
+			break
 		}
-		WLine("}")
+	}
+}
+func (t *ExcelToCx) DocfgClass(rows [][]string) {
+	/*
+	   public static class Cfg_Test
+	   {
+	   }
+	*/
+	WLine("public static class Cfg_%s", t.fileName)
+	WLine("{")
 
+	WLine("public List<%s> list = new List<%s>();", t.baseInfoName, t.baseInfoName)
+	for x, row := range rows {
+		canshuzhi := ""
+		for index, colCell := range row {
+			_t := ","
+			if index == len(t.ctypeNameList) {
+				_t = ""
+			}
+			canshuzhi += colCell + _t
+		}
+		WLine(" list[%d] = new %s(%s);", x, t.baseInfoName, canshuzhi)
 	}
 	WLine("}")
-
-	// 将配置文件写入文件中
-	err = ioutil.WriteFile(fileName+".cs", []byte(file_content), 0644)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("配置文件已生成")
 }
 
 // 遍历每一行数据
