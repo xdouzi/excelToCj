@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 public class Cfg_t_eliminate_effect_s_Info
 {
-public int id;
-public int a_base_save_id;
-public int a_base_eliminate_effect_id;
-public int c_base_color_id;
-public int c_base_era_effect;
-public int a_base_dispel_type;
-public string c_arrayints_combinationeffect1_id;
-public string c_arrayints_combinationeffect2_id;
-public string c_arrayints_combinationeffect3_id;
-public string c_ints_effect2_playtime;
-public string c_ints_effect2_flytime;
-public string c_ints_effect3_playtime;
-public int c_base_effectend_playtime;
+	public int id;
+	public int a_base_save_id;
+	public int a_base_eliminate_effect_id;
+	public int c_base_color_id;
+	public int c_base_era_effect;
+	public int a_base_dispel_type;
+	public string c_arrayints_combinationeffect1_id;
+	public string c_arrayints_combinationeffect2_id;
+	public string c_arrayints_combinationeffect3_id;
+	public string c_ints_effect2_playtime;
+	public string c_ints_effect2_flytime;
+	public string c_ints_effect3_playtime;
+	public int c_base_effectend_playtime;
 public Cfg_t_eliminate_effect_s_Info(int id,int a_base_save_id,int a_base_eliminate_effect_id,int c_base_color_id,int c_base_era_effect,int a_base_dispel_type,string c_arrayints_combinationeffect1_id,string c_arrayints_combinationeffect2_id,string c_arrayints_combinationeffect3_id,string c_ints_effect2_playtime,string c_ints_effect2_flytime,string c_ints_effect3_playtime,int c_base_effectend_playtime)
 {
   this.id = id;

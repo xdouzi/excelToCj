@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 public class Cfg_t_buff_id_Info
 {
-public int id;
-public int a_base_buff_id;
-public int a_base_name;
-public string c_base_icon;
-public int a_base_buff_type;
-public int a_base_clear_type;
-public int a_base_buff_lv;
-public int a_base_continue_time;
-public string a_ints_call_buff;
-public string a_ints_break_type;
-public int a_base_effects;
-public int a_base_buff_superposition;
-public string a_ints_shadertypevalue;
+	public int id;
+	public int a_base_buff_id;
+	public int a_base_name;
+	public string c_base_icon;
+	public int a_base_buff_type;
+	public int a_base_clear_type;
+	public int a_base_buff_lv;
+	public int a_base_continue_time;
+	public string a_ints_call_buff;
+	public string a_ints_break_type;
+	public int a_base_effects;
+	public int a_base_buff_superposition;
+	public string a_ints_shadertypevalue;
 public Cfg_t_buff_id_Info(int id,int a_base_buff_id,int a_base_name,string c_base_icon,int a_base_buff_type,int a_base_clear_type,int a_base_buff_lv,int a_base_continue_time,string a_ints_call_buff,string a_ints_break_type,int a_base_effects,int a_base_buff_superposition,string a_ints_shadertypevalue)
 {
   this.id = id;

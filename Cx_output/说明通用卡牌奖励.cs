@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 public class Cfg_说明通用卡牌奖励_Info
 {
-public string 10200;
-public string 1;
-public string 1;
-public string 1;
-public string 10200,1,0,0,0,1000;
-public string 3105;
-public string 1;
-public string 1;
-public string 10200,1,0,0,0,1000;21110,1,0,0,0,1000;21130,1,0,0,0,1000;47210,1,0,0,0,1000;
+	public string 10200;
+	public string 1;
+	public string 1;
+	public string 1;
+	public string 10200,1,0,0,0,1000;
+	public string 3105;
+	public string 1;
+	public string 1;
+	public string 10200,1,0,0,0,1000;21110,1,0,0,0,1000;21130,1,0,0,0,1000;47210,1,0,0,0,1000;
 public Cfg_说明通用卡牌奖励_Info(int id,int a_base_item_id,int a_base_operater_id,int c_base_name,string c_base_item_name,string c_base_item_show_name,int c_base_tips,int c_base_child_type,int a_base_type,int a_base_sort,int c_base_tab,int a_base_property,int a_base_quality,int c_base_kinds_icon,int c_base_stack,string c_ints_fetch_way,int c_base_tips_type,string a_arrayints_use_limit,string c_base_flash,int a_base_term,int a_base_trade,string a_arrayints_item_use_id,string a_arrayints_item_time,int a_base_award_id,string a_ints_price,int a_base_card_group_id,int a_base_automatic_open,int c_base_item_flyint id,int a_base_item_id,int a_base_operater_id,int c_base_name,string c_base_icon_name,int c_base_tips,int c_base_child_type,int a_base_type,int a_base_sort,int c_base_tab,int a_base_property,int a_base_quality,int c_base_kinds_icon,int c_base_stack,string c_ints_fetch_way,string a_ints_tips_type,string a_ints_use_limit,string c_base_flash,int a_base_term,int a_base_trade,string a_arrayints_item_use_id,string a_arrayints_item_time,int a_base_award_id,string a_ints_price,int a_base_card_group_id,int a_base_automatic_open,int c_base_item_flystring 页签类型,string 顺序,string 10000,string 宝箱1,string 宝箱2,string 宝箱3,int 注：玩法表中数据引用,string 验证,string 卡牌总数,string 部分1数量,string 部分1次数,string 部分2数量,string 部分2次数,string 石器时代,string 1,string 1,string 2,string 品质,string 随机卡牌,string 数量int 第1部分,int 第2部分,int 第1部分,int 第2部分,int 第1部分,int 第2部分,string 宝箱:,int 1,int 1,int 1,int 1,int 1,int 1,int 1,int 1,int 1,int 1,int 2,int 2,int 2,int 2,int 2,int 2,int 2,int 2,int 2,int 2,int 3,int 3,int 3,int 3,int 3,int 3,int 3,int 3,int 3,int 3string id,string 名称,string 宝箱,string 时代string 奖励次数,string id,A,0,0,0,string id,string 名称,string 宝箱,string 时代,string 卡牌品质,string 部分,string 奖励组合int id,int a_base_award_id,string a_arrayints_type,string a_arrayints_award,string a_arrayints_random_awardstring 1小时,string 金币,string 1小时金币string 10200,string 1,string 1,string 1,string 10200,1,0,0,0,1000,string 3105,string 1,string 1,string 10200,1,0,0,0,1000;21110,1,0,0,0,1000;21130,1,0,0,0,1000;47210,1,0,0,0,1000)
 {
   this.10200 = 10200;

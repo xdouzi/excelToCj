@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 public class Cfg_t_sys_effect_Info
 {
-public int id;
-public int c_base_effects_id;
-public string c_e_name;
-public int a_base_prefab_id;
-public string c_base_effect_res;
-public int c_base_effects_time;
-public string c_base_effects_node;
-public int c_base_delay;
-public int c_base_sound_delay;
-public int c_base_saund_id;
-public string c_float_scale_size;
-public int c_base_effect_height;
+	public int id;
+	public int c_base_effects_id;
+	public string c_e_name;
+	public int a_base_prefab_id;
+	public string c_base_effect_res;
+	public int c_base_effects_time;
+	public string c_base_effects_node;
+	public int c_base_delay;
+	public int c_base_sound_delay;
+	public int c_base_saund_id;
+	public string c_float_scale_size;
+	public int c_base_effect_height;
 public Cfg_t_sys_effect_Info(int id,int c_base_effects_id,string c_e_name,int a_base_prefab_id,string c_base_effect_res,int c_base_effects_time,string c_base_effects_node,int c_base_delay,int c_base_sound_delay,int c_base_saund_id,string c_float_scale_size,int c_base_effect_height)
 {
   this.id = id;

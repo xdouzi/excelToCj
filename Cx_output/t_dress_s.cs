@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 public class Cfg_t_dress_s_Info
 {
-public int id;
-public int a_base_dress_id;
-public int a_base_initial;
-public int c_base_name;
-public int c_base_mark;
-public string a_ints_activate;
+	public int id;
+	public int a_base_dress_id;
+	public int a_base_initial;
+	public int c_base_name;
+	public int c_base_mark;
+	public string a_ints_activate;
 public Cfg_t_dress_s_Info(int id,int a_base_dress_id,int a_base_initial,int c_base_name,int c_base_mark,string a_ints_activate)
 {
   this.id = id;

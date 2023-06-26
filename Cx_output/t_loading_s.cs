@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 public class Cfg_t_loading_s_Info
 {
-public int a_base_key_id;
-public int a_base_loadingid;
-public int a_base_loadinggroupid_id;
-public string c_ints_appears_location;
-public string a_ints_player_level;
-public string a_ints_chapter_level;
-public string a_ints_house_level;
-public string a_ints_era;
-public int a_base_hold_time;
-public int a_base_loadingbg_res;
-public int c_base_animation_id;
-public int c_base_progress_bar_id;
-public string a_ints_tipstxt_group;
+	public int a_base_key_id;
+	public int a_base_loadingid;
+	public int a_base_loadinggroupid_id;
+	public string c_ints_appears_location;
+	public string a_ints_player_level;
+	public string a_ints_chapter_level;
+	public string a_ints_house_level;
+	public string a_ints_era;
+	public int a_base_hold_time;
+	public int a_base_loadingbg_res;
+	public int c_base_animation_id;
+	public int c_base_progress_bar_id;
+	public string a_ints_tipstxt_group;
 public Cfg_t_loading_s_Info(int a_base_key_id,int a_base_loadingid,int a_base_loadinggroupid_id,string c_ints_appears_location,string a_ints_player_level,string a_ints_chapter_level,string a_ints_house_level,string a_ints_era,int a_base_hold_time,int a_base_loadingbg_res,int c_base_animation_id,int c_base_progress_bar_id,string a_ints_tipstxt_group)
 {
   this.a_base_key_id = a_base_key_id;

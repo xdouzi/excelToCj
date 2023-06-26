@@ -1,32 +1,32 @@
 using System.Collections.Generic;
 public class Cfg_t_card_s_Info
 {
-public int id;
-public int a_base_card_id;
-public string a_base_operater_id;
-public int a_base_group;
-public int a_base_level;
-public int a_base_next_lv_id;
-public int c_base_cardborn_effect;
-public int a_base_setarea;
-public int a_base_auto_ai;
-public string c_arrayints_release_position;
-public int a_base_skill_id;
-public string c_ints_release_parameter;
-public string c_ints_indicator;
-public string c_arrayints_backpack_show_position;
-public string c_base_backpack_show_parameter;
-public string c_base_ui_show_position;
-public string c_base_ui_show_parameter;
-public string c_base_scene_show_position;
-public int c_base_show_model_id;
-public string c_base_scene_show_parameter;
-public int a_base_cost_card;
-public string a_base_cost_item;
-public int a_base_energy_type;
-public int a_base_energy_number;
-public string c_base_showcase_properties;
-public string c_base_video;
+	public int id;
+	public int a_base_card_id;
+	public string a_base_operater_id;
+	public int a_base_group;
+	public int a_base_level;
+	public int a_base_next_lv_id;
+	public int c_base_cardborn_effect;
+	public int a_base_setarea;
+	public int a_base_auto_ai;
+	public string c_arrayints_release_position;
+	public int a_base_skill_id;
+	public string c_ints_release_parameter;
+	public string c_ints_indicator;
+	public string c_arrayints_backpack_show_position;
+	public string c_base_backpack_show_parameter;
+	public string c_base_ui_show_position;
+	public string c_base_ui_show_parameter;
+	public string c_base_scene_show_position;
+	public int c_base_show_model_id;
+	public string c_base_scene_show_parameter;
+	public int a_base_cost_card;
+	public string a_base_cost_item;
+	public int a_base_energy_type;
+	public int a_base_energy_number;
+	public string c_base_showcase_properties;
+	public string c_base_video;
 public Cfg_t_card_s_Info(int id,int a_base_card_id,string a_base_operater_id,int a_base_group,int a_base_level,int a_base_next_lv_id,int c_base_cardborn_effect,int a_base_setarea,int a_base_auto_ai,string c_arrayints_release_position,int a_base_skill_id,string c_ints_release_parameter,string c_ints_indicator,string c_arrayints_backpack_show_position,string c_base_backpack_show_parameter,string c_base_ui_show_position,string c_base_ui_show_parameter,string c_base_scene_show_position,int c_base_show_model_id,string c_base_scene_show_parameter,int a_base_cost_card,string a_base_cost_item,int a_base_energy_type,int a_base_energy_number,string c_base_showcase_properties,string c_base_video)
 {
   this.id = id;

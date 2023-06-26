@@ -1,22 +1,22 @@
 using System.Collections.Generic;
 public class Cfg_t_sys_ui_form_Info
 {
-public int id;
-public int c_base_ui_form_id;
-public string c_base_desc;
-public string c_e_name;
-public int c_base_ui_group_id;
-public int c_base_disable_ui_layer;
-public int c_base_is_lock;
-public int c_base_load_type;
-public string c_base_asset_path;
-public int c_base_can_mulit;
-public int c_base_show_mode;
-public int c_base_freeze_mode;
-public int c_base_reside;
-public int c_base_transfer_ui;
-public int c_base_full_screen;
-public int c_base_hasDimBackGround;
+	public int id;
+	public int c_base_ui_form_id;
+	public string c_base_desc;
+	public string c_e_name;
+	public int c_base_ui_group_id;
+	public int c_base_disable_ui_layer;
+	public int c_base_is_lock;
+	public int c_base_load_type;
+	public string c_base_asset_path;
+	public int c_base_can_mulit;
+	public int c_base_show_mode;
+	public int c_base_freeze_mode;
+	public int c_base_reside;
+	public int c_base_transfer_ui;
+	public int c_base_full_screen;
+	public int c_base_hasDimBackGround;
 public Cfg_t_sys_ui_form_Info(int id,int c_base_ui_form_id,string c_base_desc,string c_e_name,int c_base_ui_group_id,int c_base_disable_ui_layer,int c_base_is_lock,int c_base_load_type,string c_base_asset_path,int c_base_can_mulit,int c_base_show_mode,int c_base_freeze_mode,int c_base_reside,int c_base_transfer_ui,int c_base_full_screen,int c_base_hasDimBackGround)
 {
   this.id = id;

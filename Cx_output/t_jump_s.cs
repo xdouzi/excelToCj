@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 public class Cfg_t_jump_s_Info
 {
-public int id;
-public int c_base_jump_id;
-public string c_e_jump_enumname;
-public int c_base_jumptoid;
-public int c_base_jump_name;
-public string c_base_jump_2;
-public int c_base_trans_open;
-public int c_base_system_id;
+	public int id;
+	public int c_base_jump_id;
+	public string c_e_jump_enumname;
+	public int c_base_jumptoid;
+	public int c_base_jump_name;
+	public string c_base_jump_2;
+	public int c_base_trans_open;
+	public int c_base_system_id;
 public Cfg_t_jump_s_Info(int id,int c_base_jump_id,string c_e_jump_enumname,int c_base_jumptoid,int c_base_jump_name,string c_base_jump_2,int c_base_trans_open,int c_base_system_id)
 {
   this.id = id;

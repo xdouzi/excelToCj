@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 public class Cfg_t_triggerlogic_s_Info
 {
-public int id;
-public int a_base_trigger_id;
-public int a_base_selfeolr_id;
-public int a_base_trigger_frequency;
-public int a_base_trigger_time_interval;
-public string a_ints_releaseloc_type;
-public string a_arrayints_release_pos;
-public int a_base_location_type;
-public int a_base_location_date;
+	public int id;
+	public int a_base_trigger_id;
+	public int a_base_selfeolr_id;
+	public int a_base_trigger_frequency;
+	public int a_base_trigger_time_interval;
+	public string a_ints_releaseloc_type;
+	public string a_arrayints_release_pos;
+	public int a_base_location_type;
+	public int a_base_location_date;
 public Cfg_t_triggerlogic_s_Info(int id,int a_base_trigger_id,int a_base_selfeolr_id,int a_base_trigger_frequency,int a_base_trigger_time_interval,string a_ints_releaseloc_type,string a_arrayints_release_pos,int a_base_location_type,int a_base_location_date)
 {
   this.id = id;

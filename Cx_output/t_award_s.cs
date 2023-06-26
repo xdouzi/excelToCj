@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 public class Cfg_t_award_s_Info
 {
-public int id;
-public int a_base_award_id;
-public string a_arrayints_type;
-public string a_arrayints_award;
-public string a_arrayints_random_award;
-public string a_arrayints_choose_award;
-public string c_arrayints_show_award;
-public string c_arrayints_fixed_award;
+	public int id;
+	public int a_base_award_id;
+	public string a_arrayints_type;
+	public string a_arrayints_award;
+	public string a_arrayints_random_award;
+	public string a_arrayints_choose_award;
+	public string c_arrayints_show_award;
+	public string c_arrayints_fixed_award;
 public Cfg_t_award_s_Info(int id,int a_base_award_id,string a_arrayints_type,string a_arrayints_award,string a_arrayints_random_award,string a_arrayints_choose_award,string c_arrayints_show_award,string c_arrayints_fixed_award)
 {
   this.id = id;

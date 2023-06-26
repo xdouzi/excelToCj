@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 public class Cfg_t_seglevel_s_Info
 {
-public int a_base_key_id;
-public int a_base_seglevelconfig_id;
-public int a_base_ear;
-public int a_base_mode;
-public int a_base_seglevel;
-public string a_ints_score_range;
-public int c_base_iconres;
+	public int a_base_key_id;
+	public int a_base_seglevelconfig_id;
+	public int a_base_ear;
+	public int a_base_mode;
+	public int a_base_seglevel;
+	public string a_ints_score_range;
+	public int c_base_iconres;
 public Cfg_t_seglevel_s_Info(int a_base_key_id,int a_base_seglevelconfig_id,int a_base_ear,int a_base_mode,int a_base_seglevel,string a_ints_score_range,int c_base_iconres)
 {
   this.a_base_key_id = a_base_key_id;

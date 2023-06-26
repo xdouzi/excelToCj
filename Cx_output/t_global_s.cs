@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 public class Cfg_t_global_s_Info
 {
-public string id;
-public int a_base_global_id;
-public string c_e_name_id;
-public string a_arrayints_parameter;
-public int a_base_intparameter;
+	public string id;
+	public int a_base_global_id;
+	public string c_e_name_id;
+	public string a_arrayints_parameter;
+	public int a_base_intparameter;
 public Cfg_t_global_s_Info(string id,int a_base_global_id,string c_e_name_id,string a_arrayints_parameter,int a_base_intparameter)
 {
   this.id = id;

@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 public class Cfg_t_sys_prefab_Info
 {
-public int id;
-public int c_base_prefab_id;
-public string a_e_name_id;
-public string c_base_asset_path;
-public int c_base_pool_id;
-public int c_base_cull_despawned;
-public int c_base_cull_above_min;
-public int c_base_cull_above_max;
-public int c_base_cull_delay;
-public int c_base_cull_maxperpass;
+	public int id;
+	public int c_base_prefab_id;
+	public string a_e_name_id;
+	public string c_base_asset_path;
+	public int c_base_pool_id;
+	public int c_base_cull_despawned;
+	public int c_base_cull_above_min;
+	public int c_base_cull_above_max;
+	public int c_base_cull_delay;
+	public int c_base_cull_maxperpass;
 public Cfg_t_sys_prefab_Info(int id,int c_base_prefab_id,string a_e_name_id,string c_base_asset_path,int c_base_pool_id,int c_base_cull_despawned,int c_base_cull_above_min,int c_base_cull_above_max,int c_base_cull_delay,int c_base_cull_maxperpass)
 {
   this.id = id;

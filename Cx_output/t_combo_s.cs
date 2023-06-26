@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 public class Cfg_t_combo_s_Info
 {
-public int id;
-public int a_base_combo_id;
-public int a_base_lavel_type;
-public int a_base_combomum;
-public int a_base_ennergyadd;
-public int a_base_buffid;
-public int c_base_res;
-public int c_base_comb_effectid;
+	public int id;
+	public int a_base_combo_id;
+	public int a_base_lavel_type;
+	public int a_base_combomum;
+	public int a_base_ennergyadd;
+	public int a_base_buffid;
+	public int c_base_res;
+	public int c_base_comb_effectid;
 public Cfg_t_combo_s_Info(int id,int a_base_combo_id,int a_base_lavel_type,int a_base_combomum,int a_base_ennergyadd,int a_base_buffid,int c_base_res,int c_base_comb_effectid)
 {
   this.id = id;

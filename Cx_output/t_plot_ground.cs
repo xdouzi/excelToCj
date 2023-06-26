@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 public class Cfg_t_plot_ground_Info
 {
-public int id;
-public int a_base_plot_ground_id;
-public string a_ints_aggregate_id;
-public int a_base_skip;
-public int a_base_auto;
-public int a_base_wait_time;
-public int a_base_cm;
-public int a_base_music;
-public int a_base_music_begin;
-public int a_base_music_loop;
-public int a_base_run_model;
-public int c_base_plot_ground_delytime;
+	public int id;
+	public int a_base_plot_ground_id;
+	public string a_ints_aggregate_id;
+	public int a_base_skip;
+	public int a_base_auto;
+	public int a_base_wait_time;
+	public int a_base_cm;
+	public int a_base_music;
+	public int a_base_music_begin;
+	public int a_base_music_loop;
+	public int a_base_run_model;
+	public int c_base_plot_ground_delytime;
 public Cfg_t_plot_ground_Info(int id,int a_base_plot_ground_id,string a_ints_aggregate_id,int a_base_skip,int a_base_auto,int a_base_wait_time,int a_base_cm,int a_base_music,int a_base_music_begin,int a_base_music_loop,int a_base_run_model,int c_base_plot_ground_delytime)
 {
   this.id = id;

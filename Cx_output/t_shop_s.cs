@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 public class Cfg_t_shop_s_Info
 {
-public int id;
-public int a_base_shop_id;
-public string c_e_name_id;
-public int c_base_shop_name;
-public string a_arrayints_open_shop_condition;
-public string a_arrayints_shop_reset;
-public string a_arrayints_hand_reset;
-public int a_base_reset_limit;
-public string a_ints_shelves;
-public int a_base_shop_time_type;
-public string a_arrayints_shop_time_scope;
-public int a_base_entrance;
-public int a_base_buy_limit;
+	public int id;
+	public int a_base_shop_id;
+	public string c_e_name_id;
+	public int c_base_shop_name;
+	public string a_arrayints_open_shop_condition;
+	public string a_arrayints_shop_reset;
+	public string a_arrayints_hand_reset;
+	public int a_base_reset_limit;
+	public string a_ints_shelves;
+	public int a_base_shop_time_type;
+	public string a_arrayints_shop_time_scope;
+	public int a_base_entrance;
+	public int a_base_buy_limit;
 public Cfg_t_shop_s_Info(int id,int a_base_commodity,int a_base_weight,string a_ints_item,string a_ints_price,int a_base_buy_second,string a_arrayints_discount_show,string a_arrayints_condition,int a_base_time_type,string a_ints_time_scopeint id,int a_base_goods_id,int a_base_shelves,int a_base_goods_lv,string a_arrayints_use_condition,string a_ints_commodityint id,int a_base_shop_id,string c_e_name_id,int c_base_shop_name,string a_arrayints_open_shop_condition,string a_arrayints_shop_reset,string a_arrayints_hand_reset,int a_base_reset_limit,string a_ints_shelves,int a_base_shop_time_type,string a_arrayints_shop_time_scope,int a_base_entrance,int a_base_buy_limit)
 {
   this.id = id;

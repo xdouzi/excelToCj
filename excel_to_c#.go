@@ -173,7 +173,7 @@ func (t *ExcelToCx) DoBaseInfo(rows [][]string) {
 				} else {
 					ctype = "string"
 				}
-				WLine("public " + ctype + " " + cname + ";")
+				WLine("	public " + ctype + " " + cname + ";")
 
 				_temp := ","
 				//拿到参数串

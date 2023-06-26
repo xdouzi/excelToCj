@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 public class Cfg_s_depot_t_Info
 {
-public int id;
-public int a_base_depot_id;
-public int a_base_depot_type;
-public int a_base_dispel_type;
-public string c_ints_base_cheese_coordinate;
-public int a_base_synthesis_priority;
+	public int id;
+	public int a_base_depot_id;
+	public int a_base_depot_type;
+	public int a_base_dispel_type;
+	public string c_ints_base_cheese_coordinate;
+	public int a_base_synthesis_priority;
 public Cfg_s_depot_t_Info(int id,int a_base_depot_id,int a_base_depot_type,int a_base_dispel_type,string c_ints_base_cheese_coordinate,int a_base_synthesis_priority)
 {
   this.id = id;

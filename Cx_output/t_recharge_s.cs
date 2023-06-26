@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 public class Cfg_t_recharge_s_Info
 {
-public int id;
-public int c_base_recharge_id;
-public int c_base_name;
-public int a_base_type;
-public int a_base_recharge_gear;
-public string a_arrayints_first_rewards;
-public int a_base_vip_exp;
-public int a_base_limit_num;
-public int c_base_promotion;
-public int c_base_discount;
-public int c_base_slogan_discount;
+	public int id;
+	public int c_base_recharge_id;
+	public int c_base_name;
+	public int a_base_type;
+	public int a_base_recharge_gear;
+	public string a_arrayints_first_rewards;
+	public int a_base_vip_exp;
+	public int a_base_limit_num;
+	public int c_base_promotion;
+	public int c_base_discount;
+	public int c_base_slogan_discount;
 public Cfg_t_recharge_s_Info(int id,int c_base_recharge_id,int c_base_name,int a_base_type,int a_base_recharge_gear,string a_arrayints_first_rewards,int a_base_vip_exp,int a_base_limit_num,int c_base_promotion,int c_base_discount,int c_base_slogan_discount)
 {
   this.id = id;

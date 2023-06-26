@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 public class Cfg_t_architecture_s_Info
 {
-public int id;
-public int a_base_architecture_id;
-public int a_base_architecture_name;
-public int a_base_architecture_tips;
-public int a_base_architecture_type;
-public string a_ints_architecture_attr;
-public string a_arrayints_architecture_unlock;
-public string a_ints_architecture_placeholder;
-public int a_base_move_type;
-public int a_base_architecture_group;
-public string a_ints_open_function;
-public int a_base_rank;
-public string a_base_hint_trigger;
-public string a_base_hint_animation;
-public int a_base_animation_click_effect;
+	public int id;
+	public int a_base_architecture_id;
+	public int a_base_architecture_name;
+	public int a_base_architecture_tips;
+	public int a_base_architecture_type;
+	public string a_ints_architecture_attr;
+	public string a_arrayints_architecture_unlock;
+	public string a_ints_architecture_placeholder;
+	public int a_base_move_type;
+	public int a_base_architecture_group;
+	public string a_ints_open_function;
+	public int a_base_rank;
+	public string a_base_hint_trigger;
+	public string a_base_hint_animation;
+	public int a_base_animation_click_effect;
 public Cfg_t_architecture_s_Info(int id,int a_base_architecture_id,int a_base_architecture_name,int a_base_architecture_tips,int a_base_architecture_type,string a_ints_architecture_attr,string a_arrayints_architecture_unlock,string a_ints_architecture_placeholder,int a_base_move_type,int a_base_architecture_group,string a_ints_open_function,int a_base_rank,string a_base_hint_trigger,string a_base_hint_animation,int a_base_animation_click_effect)
 {
   this.id = id;

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 public class Cfg_t_mail_s_Info
 {
-public int id;
-public int a_base_mail_id;
-public int a_base_mail_headline;
-public int a_base_mail_text;
+	public int id;
+	public int a_base_mail_id;
+	public int a_base_mail_headline;
+	public int a_base_mail_text;
 public Cfg_t_mail_s_Info(int id,int a_base_mail_id,int a_base_mail_headline,int a_base_mail_text)
 {
   this.id = id;

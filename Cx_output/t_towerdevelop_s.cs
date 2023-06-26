@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 public class Cfg_t_towerdevelop_s_Info
 {
-public int id;
-public int a_base_technology_id;
-public int a_base_group_id;
-public int a_base_object_id;
-public int a_base_build_type;
-public int a_base_build_level;
-public int a_base_unlock_level;
-public int a_base_object_blood;
-public int a_base_power;
-public int a_base_attack_range;
-public int a_base_attack_speed;
+	public int id;
+	public int a_base_technology_id;
+	public int a_base_group_id;
+	public int a_base_object_id;
+	public int a_base_build_type;
+	public int a_base_build_level;
+	public int a_base_unlock_level;
+	public int a_base_object_blood;
+	public int a_base_power;
+	public int a_base_attack_range;
+	public int a_base_attack_speed;
 public Cfg_t_towerdevelop_s_Info(int id,int a_base_unit_id,int a_base_unitgroup_id,int a_base_unit_kind,string a_ints_unit_type,int a_base_build_date,string a_ints_land_type,int a_base_color_type,string a_ints_unlock_config,int a_base_star,string a_base_star_id_num,string a_ints_star_recovery,int a_base_basedamage,int a_base_blood_num,int a_base_blood_recovery,int a_base_buff_id,int a_base_buff_timeint id,int a_base_technology_id,int a_base_group_id,int a_base_object_id,int a_base_build_type,int a_base_build_level,int a_base_unlock_level,int a_base_object_blood,int a_base_power,int a_base_attack_range,int a_base_attack_speed)
 {
   this.id = id;

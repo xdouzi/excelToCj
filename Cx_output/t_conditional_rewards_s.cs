@@ -1,25 +1,25 @@
 using System.Collections.Generic;
 public class Cfg_t_conditional_rewards_s_Info
 {
-public int id;
-public int c_e_name_id;
-public int a_base_conditional_rewards;
-public int a_base_activity;
-public int a_base_type;
-public int a_base_pass_level;
-public int a_base_task_days;
-public int a_base_attendance_month;
-public string a_arrayints_unlock_conditions;
-public string a_arrayints_claim_conditions;
-public string a_arrayints_award;
-public string c_ints_task_jump;
-public int a_base_special_reward;
-public int a_base_receive;
-public int a_base_packs_type;
-public string a_arrayints_duration;
-public string a_base_open_packs;
-public string a_base_close_packs;
-public int c_base_show;
+	public int id;
+	public int c_e_name_id;
+	public int a_base_conditional_rewards;
+	public int a_base_activity;
+	public int a_base_type;
+	public int a_base_pass_level;
+	public int a_base_task_days;
+	public int a_base_attendance_month;
+	public string a_arrayints_unlock_conditions;
+	public string a_arrayints_claim_conditions;
+	public string a_arrayints_award;
+	public string c_ints_task_jump;
+	public int a_base_special_reward;
+	public int a_base_receive;
+	public int a_base_packs_type;
+	public string a_arrayints_duration;
+	public string a_base_open_packs;
+	public string a_base_close_packs;
+	public int c_base_show;
 public Cfg_t_conditional_rewards_s_Info(int id,int c_e_name_id,int a_base_conditional_rewards,int a_base_activity,int a_base_type,int a_base_pass_level,int a_base_task_days,int a_base_attendance_month,string a_arrayints_unlock_conditions,string a_arrayints_claim_conditions,string a_arrayints_award,string c_ints_task_jump,int a_base_special_reward,int a_base_receive,int a_base_packs_type,string a_arrayints_duration,string a_base_open_packs,string a_base_close_packs,int c_base_show)
 {
   this.id = id;

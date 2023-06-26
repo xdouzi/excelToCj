@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 public class Cfg_t_tower_reward_s_Info
 {
-public int id;
-public int a_base_award_id;
-public int a_base_level_id;
-public int a_base_level_reward;
+	public int id;
+	public int a_base_award_id;
+	public int a_base_level_id;
+	public int a_base_level_reward;
 public Cfg_t_tower_reward_s_Info(int id,int a_base_award_id,int a_base_level_id,int a_base_level_reward)
 {
   this.id = id;

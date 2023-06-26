@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 public class Cfg_t_attribute_show_s_Info
 {
-public int id;
-public int a_base_attribute_id;
-public string a_base_operater_id;
-public int c_base_name;
-public int c_base_tips;
-public int a_base_show_type;
-public string c_base_attribute_icon;
-public int c_base_attribute_suffix;
-public int c_base_attribute_add;
-public int a_base_type;
-public string a_ints_item_parameter;
+	public int id;
+	public int a_base_attribute_id;
+	public string a_base_operater_id;
+	public int c_base_name;
+	public int c_base_tips;
+	public int a_base_show_type;
+	public string c_base_attribute_icon;
+	public int c_base_attribute_suffix;
+	public int c_base_attribute_add;
+	public int a_base_type;
+	public string a_ints_item_parameter;
 public Cfg_t_attribute_show_s_Info(int id,int a_base_attribute_id,string a_base_operater_id,int c_base_name,int c_base_tips,int a_base_show_type,string c_base_attribute_icon,int c_base_attribute_suffix,int c_base_attribute_add,int a_base_type,string a_ints_item_parameter)
 {
   this.id = id;

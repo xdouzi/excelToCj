@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 public class Cfg_t_player_level_s_Info
 {
-public int id;
-public int a_base_level_id;
-public int a_base_exp;
+	public int id;
+	public int a_base_level_id;
+	public int a_base_exp;
 public Cfg_t_player_level_s_Info(int id,int a_base_level_id,int a_base_exp)
 {
   this.id = id;

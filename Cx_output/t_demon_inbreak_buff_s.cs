@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 public class Cfg_t_demon_inbreak_buff_s_Info
 {
-public int id;
-public int a_base_buff_id;
-public int a_base_quality;
-public string c_base_buff_res;
-public int c_base_name;
-public string c_ints_desc;
-public string a_arrayints_application_range;
+	public int id;
+	public int a_base_buff_id;
+	public int a_base_quality;
+	public string c_base_buff_res;
+	public int c_base_name;
+	public string c_ints_desc;
+	public string a_arrayints_application_range;
 public Cfg_t_demon_inbreak_buff_s_Info(int id,int a_base_pool_id,string a_arrayints_buffint id,int a_base_buff_id,int a_base_quality,string c_base_buff_res,int c_base_name,string c_ints_desc,string a_arrayints_application_range)
 {
   this.id = id;

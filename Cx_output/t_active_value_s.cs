@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 public class Cfg_t_active_value_s_Info
 {
-public int id;
-public int a_base_active_value_id;
-public int a_base_operater_id;
-public int a_base_min_lv;
-public int a_base_max_lv;
-public int a_base_task_type;
-public int a_base_active_value;
-public int a_base_reward;
-public int a_base_reissue;
-public int a_base_automatic;
-public string c_base_gift_bag;
+	public int id;
+	public int a_base_active_value_id;
+	public int a_base_operater_id;
+	public int a_base_min_lv;
+	public int a_base_max_lv;
+	public int a_base_task_type;
+	public int a_base_active_value;
+	public int a_base_reward;
+	public int a_base_reissue;
+	public int a_base_automatic;
+	public string c_base_gift_bag;
 public Cfg_t_active_value_s_Info(int id,int a_base_task_id,int a_base_operater_id,int c_base_desc,int a_base_task_type,int a_base_reissue,int a_base_automatic,int a_base_group,int a_base_receive,string a_arrayints_get_task,string a_arrayints_accomplish,string a_base_next_task,int a_base_rank,int a_base_reward,string c_ints_button,string a_arrayints_plotint id,int a_base_active_value_id,int a_base_operater_id,int a_base_min_lv,int a_base_max_lv,int a_base_task_type,int a_base_active_value,int a_base_reward,int a_base_reissue,int a_base_automatic,string c_base_gift_bag)
 {
   this.id = id;

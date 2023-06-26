@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 public class Cfg_t_border_s_Info
 {
-public int id;
-public int a_base_border_id;
-public int a_base_initial;
-public int c_base_name;
-public int c_base_desc;
+	public int id;
+	public int a_base_border_id;
+	public int a_base_initial;
+	public int c_base_name;
+	public int c_base_desc;
 public Cfg_t_border_s_Info(int id,int a_base_border_id,int a_base_initial,int c_base_name,int c_base_desc)
 {
   this.id = id;

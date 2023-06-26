@@ -1,26 +1,26 @@
 using System.Collections.Generic;
 public class Cfg_说明辅助表_Info
 {
-public string 页签类型;
-public string 顺序;
-public string 10000;
-public string 宝箱1;
-public string 宝箱2;
-public string 宝箱3;
-public int 注：玩法表中数据引用;
-public string 验证;
-public string 卡牌总数;
-public string 部分1数量;
-public string 部分1次数;
-public string 部分2数量;
-public string 部分2次数;
-public string 石器时代;
-public string 1;
-public string 1;
-public string 2;
-public string 品质;
-public string 随机卡牌;
-public string 数量;
+	public string 页签类型;
+	public string 顺序;
+	public string 10000;
+	public string 宝箱1;
+	public string 宝箱2;
+	public string 宝箱3;
+	public int 注：玩法表中数据引用;
+	public string 验证;
+	public string 卡牌总数;
+	public string 部分1数量;
+	public string 部分1次数;
+	public string 部分2数量;
+	public string 部分2次数;
+	public string 石器时代;
+	public string 1;
+	public string 1;
+	public string 2;
+	public string 品质;
+	public string 随机卡牌;
+	public string 数量;
 public Cfg_说明辅助表_Info(int id,int a_base_item_id,int a_base_operater_id,int c_base_name,string c_base_item_name,string c_base_item_show_name,int c_base_tips,int c_base_child_type,int a_base_type,int a_base_sort,int c_base_tab,int a_base_property,int a_base_quality,int c_base_kinds_icon,int c_base_stack,string c_ints_fetch_way,int c_base_tips_type,string a_arrayints_use_limit,string c_base_flash,int a_base_term,int a_base_trade,string a_arrayints_item_use_id,string a_arrayints_item_time,int a_base_award_id,string a_ints_price,int a_base_card_group_id,int a_base_automatic_open,int c_base_item_flyint id,int a_base_item_id,int a_base_operater_id,int c_base_name,string c_base_icon_name,int c_base_tips,int c_base_child_type,int a_base_type,int a_base_sort,int c_base_tab,int a_base_property,int a_base_quality,int c_base_kinds_icon,int c_base_stack,string c_ints_fetch_way,string a_ints_tips_type,string a_ints_use_limit,string c_base_flash,int a_base_term,int a_base_trade,string a_arrayints_item_use_id,string a_arrayints_item_time,int a_base_award_id,string a_ints_price,int a_base_card_group_id,int a_base_automatic_open,int c_base_item_flystring 页签类型,string 顺序,string 10000,string 宝箱1,string 宝箱2,string 宝箱3,int 注：玩法表中数据引用,string 验证,string 卡牌总数,string 部分1数量,string 部分1次数,string 部分2数量,string 部分2次数,string 石器时代,string 1,string 1,string 2,string 品质,string 随机卡牌,string 数量)
 {
   this.页签类型 = 页签类型;

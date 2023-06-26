@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 public class Cfg_t_synthesis_s_Info
 {
-public int id;
-public int a_base_synthesis_id;
-public string a_base_operater_id;
-public string a_arrayints_material;
-public string a_ints_deplete_currency;
-public string a_arrayints_use_condition;
+	public int id;
+	public int a_base_synthesis_id;
+	public string a_base_operater_id;
+	public string a_arrayints_material;
+	public string a_ints_deplete_currency;
+	public string a_arrayints_use_condition;
 public Cfg_t_synthesis_s_Info(int id,int a_base_synthesis_id,string a_base_operater_id,string a_arrayints_material,string a_ints_deplete_currency,string a_arrayints_use_condition)
 {
   this.id = id;

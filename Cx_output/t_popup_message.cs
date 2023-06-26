@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 public class Cfg_t_popup_message_Info
 {
-public int id;
-public int a_base_popup_id;
-public string a_base_operater_id;
-public int c_e_name_id;
-public int a_base_popup_message_type;
-public int a_base_headline;
-public int c_base_location;
-public int a_base_text;
-public int a_base_button1;
-public int a_base_button2;
-public int a_base_trigger;
-public string a_ints_condition;
-public int c_base_number;
+	public int id;
+	public int a_base_popup_id;
+	public string a_base_operater_id;
+	public int c_e_name_id;
+	public int a_base_popup_message_type;
+	public int a_base_headline;
+	public int c_base_location;
+	public int a_base_text;
+	public int a_base_button1;
+	public int a_base_button2;
+	public int a_base_trigger;
+	public string a_ints_condition;
+	public int c_base_number;
 public Cfg_t_popup_message_Info(int id,int a_base_popup_id,string a_base_operater_id,int c_e_name_id,int a_base_popup_message_type,int a_base_headline,int c_base_location,int a_base_text,int a_base_button1,int a_base_button2,int a_base_trigger,string a_ints_condition,int c_base_number)
 {
   this.id = id;

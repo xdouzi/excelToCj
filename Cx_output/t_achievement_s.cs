@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 public class Cfg_t_achievement_s_Info
 {
-public int id;
-public int a_base_achievement_id;
-public int a_base_receive;
-public int c_base_name;
-public int c_base_border;
-public string c_base_icon;
-public string a_arrayints_unlock;
-public string a_arrayints_complete;
-public string a_base_next_task;
-public int a_base_award;
+	public int id;
+	public int a_base_achievement_id;
+	public int a_base_receive;
+	public int c_base_name;
+	public int c_base_border;
+	public string c_base_icon;
+	public string a_arrayints_unlock;
+	public string a_arrayints_complete;
+	public string a_base_next_task;
+	public int a_base_award;
 public Cfg_t_achievement_s_Info(int id,int a_base_achievement_id,int a_base_receive,int c_base_name,int c_base_border,string c_base_icon,string a_arrayints_unlock,string a_arrayints_complete,string a_base_next_task,int a_base_award)
 {
   this.id = id;

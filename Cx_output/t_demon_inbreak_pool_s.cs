@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 public class Cfg_t_demon_inbreak_pool_s_Info
 {
-public int id;
-public int a_base_pool_id;
-public string a_arrayints_buff;
+	public int id;
+	public int a_base_pool_id;
+	public string a_arrayints_buff;
 public Cfg_t_demon_inbreak_pool_s_Info(int id,int a_base_pool_id,string a_arrayints_buff)
 {
   this.id = id;

@@ -1,28 +1,28 @@
 using System.Collections.Generic;
 public class Cfg_t_levelchapter_s_Info
 {
-public int id;
-public int a_base_level_id;
-public int a_base_chapter_id;
-public int a_base_chapter_name;
-public int a_base_levelchapter;
-public int a_base_level_name;
-public int c_base_condition_text;
-public int a_base_next_level_id;
-public int a_base_mode_type;
-public int a_base_mode_subtype;
-public int a_base_pvptype;
-public int a_base_combat_cost;
-public int a_base_era_limits;
-public int a_base_amount;
-public int c_base_era_progress;
-public int a_base_isshow_energy;
-public string c_arrayints_show_boss_res_id;
-public string c_base_effect_display;
-public int c_base_bgpng_id;
-public string a_ints_segment_id;
-public int a_base_level_reward;
-public string a_arrayints_inbreak_reward;
+	public int id;
+	public int a_base_level_id;
+	public int a_base_chapter_id;
+	public int a_base_chapter_name;
+	public int a_base_levelchapter;
+	public int a_base_level_name;
+	public int c_base_condition_text;
+	public int a_base_next_level_id;
+	public int a_base_mode_type;
+	public int a_base_mode_subtype;
+	public int a_base_pvptype;
+	public int a_base_combat_cost;
+	public int a_base_era_limits;
+	public int a_base_amount;
+	public int c_base_era_progress;
+	public int a_base_isshow_energy;
+	public string c_arrayints_show_boss_res_id;
+	public string c_base_effect_display;
+	public int c_base_bgpng_id;
+	public string a_ints_segment_id;
+	public int a_base_level_reward;
+	public string a_arrayints_inbreak_reward;
 public Cfg_t_levelchapter_s_Info(int id,int a_base_level_id,int a_base_chapter_id,int a_base_chapter_name,int a_base_levelchapter,int a_base_level_name,int c_base_condition_text,int a_base_next_level_id,int a_base_mode_type,int a_base_mode_subtype,int a_base_pvptype,int a_base_combat_cost,int a_base_era_limits,int a_base_amount,int c_base_era_progress,int a_base_isshow_energy,string c_arrayints_show_boss_res_id,string c_base_effect_display,int c_base_bgpng_id,string a_ints_segment_id,int a_base_level_reward,string a_arrayints_inbreak_reward)
 {
   this.id = id;

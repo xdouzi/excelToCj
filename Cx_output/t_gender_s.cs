@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 public class Cfg_t_gender_s_Info
 {
-public int id;
-public int a_base_gender_id;
-public int a_base_dress_id;
-public int a_base_gender;
-public int c_base_model;
-public string c_vector3_position;
-public string c_vector3_scale;
+	public int id;
+	public int a_base_gender_id;
+	public int a_base_dress_id;
+	public int a_base_gender;
+	public int c_base_model;
+	public string c_vector3_position;
+	public string c_vector3_scale;
 public Cfg_t_gender_s_Info(int id,int a_base_dress_id,int a_base_initial,int c_base_name,int c_base_mark,string a_ints_activateint id,int a_base_gender_id,int a_base_dress_id,int a_base_gender,int c_base_model,string c_vector3_position,string c_vector3_scale)
 {
   this.id = id;

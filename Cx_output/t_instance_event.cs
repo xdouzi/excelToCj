@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 public class Cfg_t_instance_event_Info
 {
-public int id;
-public int a_base_dungeon_event_id;
-public int a_base_trigger_type;
-public string a_ints_trigger_information;
-public string a_ints_screen_shake;
-public string a_ints_talk;
-public int c_base_mask;
-public string c_base_mask_information;
-public int c_base_mask_pellucidity;
-public int c_base_mask_time;
-public string c_arrayints_scene_color_change;
+	public int id;
+	public int a_base_dungeon_event_id;
+	public int a_base_trigger_type;
+	public string a_ints_trigger_information;
+	public string a_ints_screen_shake;
+	public string a_ints_talk;
+	public int c_base_mask;
+	public string c_base_mask_information;
+	public int c_base_mask_pellucidity;
+	public int c_base_mask_time;
+	public string c_arrayints_scene_color_change;
 public Cfg_t_instance_event_Info(int id,int a_base_level_id,int a_base_chapter_id,int a_base_chapter_name,int a_base_levelchapter,int a_base_level_name,int c_base_condition_text,int a_base_next_level_id,int a_base_mode_type,int a_base_mode_subtype,int a_base_pvptype,int a_base_combat_cost,int a_base_era_limits,int a_base_amount,int c_base_era_progress,int a_base_isshow_energy,string c_arrayints_show_boss_res_id,string c_base_effect_display,int c_base_bgpng_id,string a_ints_segment_id,int a_base_level_reward,string a_arrayints_inbreak_rewardint id,int a_base_segment_id,int a_base_mode_type,int a_base_pvptype,int c_base_map_id,int c_base_bgm_id,string a_ints_battlefield_size,string a_ints_enter_page_split,int c_base_lens_performance,int a_base_control_camera,int a_base_is_rechallenge,int a_base_timeover,int a_base_next_card_cd,string a_arrayints_reserve,string a_base_troops_location,string a_arrayints_birth_area,string a_arrayints_peace_area,string a_arrayints_battlefield_occupation,string a_ints_coordinates_id,string a_arrayints_deity_coordinates,string a_arrayints_monster_deity_coordinates,string a_arrayints_main_building,int c_base_camera_movement,string a_arrayints_initial_soldier,string a_ints_card_use,int a_base_soldier_busy_can_use,string a_arrayints_barrier,string a_arrayints_barrierprefab,string a_arrayints_barrierfence,string a_arrayints_start_plot_id,string a_ints_segment_events,string a_ints_end_plot_id,int a_base_windescription,string a_ints_winning_condition,string a_arrayints_end_condition04,int a_base_wave_cd,string a_base_monster_config,string a_ints_waves_trigger,string a_ints_wave_buff,string a_arrayints_displayboss_nodes,int a_base_monster_trigger_time,string a_ints_towerunit_type,string a_ints_toweropen,int a_base_enmination_addtime,string a_ints_chess,string a_ints_reserved_chess,string a_ints_chess_reset,string a_pairweights_cheese_weights,int a_base_chessboard_height,int a_base_chessboard_width,int c_base_chessboard_res,string a_arrayints_tower_feature,string a_ints_feature_desc,string a_ints_buff_pool_id,string a_arrayints_buff_probability,int a_base_td_skilllv,int a_base_initialenergyvalue,int a_base_closeup_switch,string a_base_mapoffsrt,string c_base_picture_id,string c_ints_tower_start,int c_base_juma_idint id,int a_base_dungeon_event_id,int a_base_trigger_type,string a_ints_trigger_information,string a_ints_screen_shake,string a_ints_talk,int c_base_mask,string c_base_mask_information,int c_base_mask_pellucidity,int c_base_mask_time,string c_arrayints_scene_color_change)
 {
   this.id = id;

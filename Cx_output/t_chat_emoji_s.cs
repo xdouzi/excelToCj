@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 public class Cfg_t_chat_emoji_s_Info
 {
-public int id;
-public int a_base_emoji_id;
-public int a_base_group;
-public string c_base_emoji_short_name;
-public string c_base_cover_path;
-public string c_base_emoji_res;
-public string c_base_res_path;
+	public int id;
+	public int a_base_emoji_id;
+	public int a_base_group;
+	public string c_base_emoji_short_name;
+	public string c_base_cover_path;
+	public string c_base_emoji_res;
+	public string c_base_res_path;
 public Cfg_t_chat_emoji_s_Info(int id,int a_base_emoji_id,int a_base_group,string c_base_emoji_short_name,string c_base_cover_path,string c_base_emoji_res,string c_base_res_path)
 {
   this.id = id;

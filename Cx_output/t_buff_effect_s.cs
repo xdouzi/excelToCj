@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 public class Cfg_t_buff_effect_s_Info
 {
-public int id;
-public int a_base_buff_effect_id;
-public int a_base_effect_type;
-public string a_ints_call_effect_parameter;
-public string a_ints_effect_target;
-public int a_base_start_time;
-public int a_base_effect_frequency;
-public string a_ints_buff_superposition;
-public string a_ints_mutual_effect;
-public int a_base_call_effect_id;
-public int a_base_break;
+	public int id;
+	public int a_base_buff_effect_id;
+	public int a_base_effect_type;
+	public string a_ints_call_effect_parameter;
+	public string a_ints_effect_target;
+	public int a_base_start_time;
+	public int a_base_effect_frequency;
+	public string a_ints_buff_superposition;
+	public string a_ints_mutual_effect;
+	public int a_base_call_effect_id;
+	public int a_base_break;
 public Cfg_t_buff_effect_s_Info(int id,int a_base_buff_id,int a_base_name,string c_base_icon,int a_base_buff_type,int a_base_clear_type,int a_base_buff_lv,int a_base_continue_time,string a_ints_call_buff,string a_ints_break_type,int a_base_effects,int a_base_buff_superposition,string a_ints_shadertypevalueint id,int a_base_buff_effect_id,int a_base_effect_type,string a_ints_call_effect_parameter,string a_ints_effect_target,int a_base_start_time,int a_base_effect_frequency,string a_ints_buff_superposition,string a_ints_mutual_effect,int a_base_call_effect_id,int a_base_break)
 {
   this.id = id;

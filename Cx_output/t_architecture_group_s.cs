@@ -1,29 +1,29 @@
 using System.Collections.Generic;
 public class Cfg_t_architecture_group_s_Info
 {
-public int id;
-public int a_base_group_id;
-public int a_base_group;
-public int a_base_architecture_lv;
-public string a_arrayints_upgrade_condition;
-public string a_arrayints_upgrade_expend;
-public int a_base_upgrade_time;
-public string a_arrayints_architecture_property;
-public string a_ints_resource;
-public string a_ints_corps_type;
-public string a_ints_corps_id;
-public string a_ints_godrole_id;
-public string a_ints_corps_num;
-public string a_arrayints_towerunit_id;
-public string a_arrayints_passive_skills;
-public int a_base_god_id;
-public string a_base_later_story;
-public string a_base_respath;
-public int c_base_eff_id;
-public string c_vector3_eff_pos;
-public string a_base_show_icon;
-public string a_arrayints_architecture_show;
-public int a_base_building_type;
+	public int id;
+	public int a_base_group_id;
+	public int a_base_group;
+	public int a_base_architecture_lv;
+	public string a_arrayints_upgrade_condition;
+	public string a_arrayints_upgrade_expend;
+	public int a_base_upgrade_time;
+	public string a_arrayints_architecture_property;
+	public string a_ints_resource;
+	public string a_ints_corps_type;
+	public string a_ints_corps_id;
+	public string a_ints_godrole_id;
+	public string a_ints_corps_num;
+	public string a_arrayints_towerunit_id;
+	public string a_arrayints_passive_skills;
+	public int a_base_god_id;
+	public string a_base_later_story;
+	public string a_base_respath;
+	public int c_base_eff_id;
+	public string c_vector3_eff_pos;
+	public string a_base_show_icon;
+	public string a_arrayints_architecture_show;
+	public int a_base_building_type;
 public Cfg_t_architecture_group_s_Info(int id,int a_base_architecture_id,int a_base_architecture_name,int a_base_architecture_tips,int a_base_architecture_type,string a_ints_architecture_attr,string a_arrayints_architecture_unlock,string a_ints_architecture_placeholder,int a_base_move_type,int a_base_architecture_group,string a_ints_open_function,int a_base_rank,string a_base_hint_trigger,string a_base_hint_animation,int a_base_animation_click_effectint id,int a_base_group_id,int a_base_group,int a_base_architecture_lv,string a_arrayints_upgrade_condition,string a_arrayints_upgrade_expend,int a_base_upgrade_time,string a_arrayints_architecture_property,string a_ints_resource,string a_ints_corps_type,string a_ints_corps_id,string a_ints_godrole_id,string a_ints_corps_num,string a_arrayints_towerunit_id,string a_arrayints_passive_skills,int a_base_god_id,string a_base_later_story,string a_base_respath,int c_base_eff_id,string c_vector3_eff_pos,string a_base_show_icon,string a_arrayints_architecture_show,int a_base_building_type)
 {
   this.id = id;

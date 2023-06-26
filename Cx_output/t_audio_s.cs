@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 public class Cfg_t_audio_s_Info
 {
-public int id;
-public int c_base_audio_id;
-public string a_base_operater_id;
-public string c_e_name;
-public int c_base_type;
-public string c_base_resource;
+	public int id;
+	public int c_base_audio_id;
+	public string a_base_operater_id;
+	public string c_e_name;
+	public int c_base_type;
+	public string c_base_resource;
 public Cfg_t_audio_s_Info(int id,int c_base_audio_id,string a_base_operater_id,string c_e_name,int c_base_type,string c_base_resource)
 {
   this.id = id;

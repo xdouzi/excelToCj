@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 public class Cfg_t_sys_scene_detail_Info
 {
-public int id;
-public int c_base_scene_detail_id;
-public string c_base_name;
-public string c_base_scene_path;
-public int c_base_scene_grade;
+	public int id;
+	public int c_base_scene_detail_id;
+	public string c_base_name;
+	public string c_base_scene_path;
+	public int c_base_scene_grade;
 public Cfg_t_sys_scene_detail_Info(int id,int c_base_scene_id,string c_e_name,int c_base_bgmid,int c_base_scene_typeint id,int c_base_scene_detail_id,string c_base_name,string c_base_scene_path,int c_base_scene_grade)
 {
   this.id = id;

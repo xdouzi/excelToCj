@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 public class Cfg_t_strengthen_s_Info
 {
-public int id;
-public int a_base_strengthen_id;
-public int a_base_strengthen_name;
-public int a_base_strengthen_text;
-public string a_base_strengthen_icon;
-public string a_ints_strengthen_attr;
+	public int id;
+	public int a_base_strengthen_id;
+	public int a_base_strengthen_name;
+	public int a_base_strengthen_text;
+	public string a_base_strengthen_icon;
+	public string a_ints_strengthen_attr;
 public Cfg_t_strengthen_s_Info(int id,int a_base_strengthen_id,int a_base_strengthen_name,int a_base_strengthen_text,string a_base_strengthen_icon,string a_ints_strengthen_attr)
 {
   this.id = id;

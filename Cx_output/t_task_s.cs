@@ -1,22 +1,22 @@
 using System.Collections.Generic;
 public class Cfg_t_task_s_Info
 {
-public int id;
-public int a_base_task_id;
-public int a_base_operater_id;
-public int c_base_desc;
-public int a_base_task_type;
-public int a_base_reissue;
-public int a_base_automatic;
-public int a_base_group;
-public int a_base_receive;
-public string a_arrayints_get_task;
-public string a_arrayints_accomplish;
-public string a_base_next_task;
-public int a_base_rank;
-public int a_base_reward;
-public string c_ints_button;
-public string a_arrayints_plot;
+	public int id;
+	public int a_base_task_id;
+	public int a_base_operater_id;
+	public int c_base_desc;
+	public int a_base_task_type;
+	public int a_base_reissue;
+	public int a_base_automatic;
+	public int a_base_group;
+	public int a_base_receive;
+	public string a_arrayints_get_task;
+	public string a_arrayints_accomplish;
+	public string a_base_next_task;
+	public int a_base_rank;
+	public int a_base_reward;
+	public string c_ints_button;
+	public string a_arrayints_plot;
 public Cfg_t_task_s_Info(int id,int a_base_task_id,int a_base_operater_id,int c_base_desc,int a_base_task_type,int a_base_reissue,int a_base_automatic,int a_base_group,int a_base_receive,string a_arrayints_get_task,string a_arrayints_accomplish,string a_base_next_task,int a_base_rank,int a_base_reward,string c_ints_button,string a_arrayints_plot)
 {
   this.id = id;

@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 public class Cfg_t_system_open_s_Info
 {
-public int id;
-public int a_base_system_id;
-public string c_e_name_id;
-public int a_base_system_icon;
-public int c_base_function_name;
-public string c_base_function_entrance;
-public int c_base_jump_id;
-public int c_base_function_headline;
-public int c_base_subheading;
-public int c_base_describe;
-public string a_arrayints_condition;
+	public int id;
+	public int a_base_system_id;
+	public string c_e_name_id;
+	public int a_base_system_icon;
+	public int c_base_function_name;
+	public string c_base_function_entrance;
+	public int c_base_jump_id;
+	public int c_base_function_headline;
+	public int c_base_subheading;
+	public int c_base_describe;
+	public string a_arrayints_condition;
 public Cfg_t_system_open_s_Info(int id,int a_base_system_id,string c_e_name_id,int a_base_system_icon,int c_base_function_name,string c_base_function_entrance,int c_base_jump_id,int c_base_function_headline,int c_base_subheading,int c_base_describe,string a_arrayints_condition)
 {
   this.id = id;

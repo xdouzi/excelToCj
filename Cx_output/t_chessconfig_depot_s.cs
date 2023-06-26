@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 public class Cfg_t_chessconfig_depot_s_Info
 {
-public int id;
-public int a_base_chessbord_config_id;
-public string a_arrayints_chess_config;
+	public int id;
+	public int a_base_chessbord_config_id;
+	public string a_arrayints_chess_config;
 public Cfg_t_chessconfig_depot_s_Info(int id,int a_base_chessbord_config_id,string a_arrayints_chess_config)
 {
   this.id = id;

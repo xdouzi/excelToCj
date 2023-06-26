@@ -1,23 +1,23 @@
 using System.Collections.Generic;
 public class Cfg_t_towerdefense_s_Info
 {
-public int id;
-public int a_base_unit_id;
-public int a_base_unitgroup_id;
-public int a_base_unit_kind;
-public string a_ints_unit_type;
-public int a_base_build_date;
-public string a_ints_land_type;
-public int a_base_color_type;
-public string a_ints_unlock_config;
-public int a_base_star;
-public string a_base_star_id_num;
-public string a_ints_star_recovery;
-public int a_base_basedamage;
-public int a_base_blood_num;
-public int a_base_blood_recovery;
-public int a_base_buff_id;
-public int a_base_buff_time;
+	public int id;
+	public int a_base_unit_id;
+	public int a_base_unitgroup_id;
+	public int a_base_unit_kind;
+	public string a_ints_unit_type;
+	public int a_base_build_date;
+	public string a_ints_land_type;
+	public int a_base_color_type;
+	public string a_ints_unlock_config;
+	public int a_base_star;
+	public string a_base_star_id_num;
+	public string a_ints_star_recovery;
+	public int a_base_basedamage;
+	public int a_base_blood_num;
+	public int a_base_blood_recovery;
+	public int a_base_buff_id;
+	public int a_base_buff_time;
 public Cfg_t_towerdefense_s_Info(int id,int a_base_unit_id,int a_base_unitgroup_id,int a_base_unit_kind,string a_ints_unit_type,int a_base_build_date,string a_ints_land_type,int a_base_color_type,string a_ints_unlock_config,int a_base_star,string a_base_star_id_num,string a_ints_star_recovery,int a_base_basedamage,int a_base_blood_num,int a_base_blood_recovery,int a_base_buff_id,int a_base_buff_time)
 {
   this.id = id;

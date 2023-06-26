@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 public class Cfg_t_spine_Info
 {
-public int id;
-public int c_base_spine_id;
-public string c_base_prefab_path;
-public string c_base_spine_path;
+	public int id;
+	public int c_base_spine_id;
+	public string c_base_prefab_path;
+	public string c_base_spine_path;
 public Cfg_t_spine_Info(int id,int c_base_spine_id,string c_base_prefab_path,string c_base_spine_path)
 {
   this.id = id;

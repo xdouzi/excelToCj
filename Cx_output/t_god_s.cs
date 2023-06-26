@@ -1,22 +1,22 @@
 using System.Collections.Generic;
 public class Cfg_t_god_s_Info
 {
-public int id;
-public int a_base_god_id;
-public int a_base_god_type;
-public int a_base_god_name;
-public int c_base_godprefab_id;
-public int c_base_first_skill;
-public int c_base_second_skill;
-public int c_base_third_skill;
-public int c_base_fourth_skill;
-public string c_base_god_skillicon;
-public string c_arrayints_skill_type;
-public string a_arrayints_god_unlock;
-public string c_arrayints_god_skillname;
-public string c_arrayints_god_attr;
-public string c_vector3_position;
-public string c_vector3_scale;
+	public int id;
+	public int a_base_god_id;
+	public int a_base_god_type;
+	public int a_base_god_name;
+	public int c_base_godprefab_id;
+	public int c_base_first_skill;
+	public int c_base_second_skill;
+	public int c_base_third_skill;
+	public int c_base_fourth_skill;
+	public string c_base_god_skillicon;
+	public string c_arrayints_skill_type;
+	public string a_arrayints_god_unlock;
+	public string c_arrayints_god_skillname;
+	public string c_arrayints_god_attr;
+	public string c_vector3_position;
+	public string c_vector3_scale;
 public Cfg_t_god_s_Info(int id,int a_base_god_id,int a_base_god_type,int a_base_god_name,int c_base_godprefab_id,int c_base_first_skill,int c_base_second_skill,int c_base_third_skill,int c_base_fourth_skill,string c_base_god_skillicon,string c_arrayints_skill_type,string a_arrayints_god_unlock,string c_arrayints_god_skillname,string c_arrayints_god_attr,string c_vector3_position,string c_vector3_scale)
 {
   this.id = id;

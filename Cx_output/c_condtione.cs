@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 public class Cfg_c_condtione_Info
 {
-public int id;
-public int a_base_condition_id;
-public string c_e_condition_name;
-public int c_base_condition_text;
+	public int id;
+	public int a_base_condition_id;
+	public string c_e_condition_name;
+	public int c_base_condition_text;
 public Cfg_c_condtione_Info(int id,int a_base_condition_id,string c_e_condition_name,int c_base_condition_text)
 {
   this.id = id;

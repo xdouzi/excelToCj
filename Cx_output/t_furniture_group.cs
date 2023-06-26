@@ -1,23 +1,23 @@
 using System.Collections.Generic;
 public class Cfg_t_furniture_group_Info
 {
-public int id;
-public int a_base_furniture_group_id;
-public int a_base_group_name;
-public string a_base_group_icon;
-public int c_base_groupprefab_id;
-public string a_arrayints_furnituregroup_unlock;
-public string a_pairints_furniture_unlockcost;
-public int a_base_unlock_effect_complete;
-public int a_base_unlock_animation_complete;
-public int a_base_furnitur_group;
-public int a_base_furniture_enableunlockplot;
-public int a_base_furniture_unlockplot;
-public int a_base_group_unlockffect;
-public int a_base_group_clickeffect;
-public int a_base_group_choseeffect;
-public int a_base_grouptips;
-public int c_base_relation_id;
+	public int id;
+	public int a_base_furniture_group_id;
+	public int a_base_group_name;
+	public string a_base_group_icon;
+	public int c_base_groupprefab_id;
+	public string a_arrayints_furnituregroup_unlock;
+	public string a_pairints_furniture_unlockcost;
+	public int a_base_unlock_effect_complete;
+	public int a_base_unlock_animation_complete;
+	public int a_base_furnitur_group;
+	public int a_base_furniture_enableunlockplot;
+	public int a_base_furniture_unlockplot;
+	public int a_base_group_unlockffect;
+	public int a_base_group_clickeffect;
+	public int a_base_group_choseeffect;
+	public int a_base_grouptips;
+	public int c_base_relation_id;
 public Cfg_t_furniture_group_Info(int id,int a_base_furniture_group_id,int a_base_group_name,string a_base_group_icon,int c_base_groupprefab_id,string a_arrayints_furnituregroup_unlock,string a_pairints_furniture_unlockcost,int a_base_unlock_effect_complete,int a_base_unlock_animation_complete,int a_base_furnitur_group,int a_base_furniture_enableunlockplot,int a_base_furniture_unlockplot,int a_base_group_unlockffect,int a_base_group_clickeffect,int a_base_group_choseeffect,int a_base_grouptips,int c_base_relation_id)
 {
   this.id = id;

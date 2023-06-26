@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 public class Cfg_t_soldirtype_s_Info
 {
-public int id;
-public int a_base_send_soldier_id;
-public int a_base_send_soldier_type;
-public int a_base_synthesis_num;
-public int a_base_synthesis_numMax;
-public int a_base_soldier_star;
-public int a_base_soldier_probability;
-public int a_base_starlevel_num;
-public int a_base_buff;
+	public int id;
+	public int a_base_send_soldier_id;
+	public int a_base_send_soldier_type;
+	public int a_base_synthesis_num;
+	public int a_base_synthesis_numMax;
+	public int a_base_soldier_star;
+	public int a_base_soldier_probability;
+	public int a_base_starlevel_num;
+	public int a_base_buff;
 public Cfg_t_soldirtype_s_Info(int id,int a_base_send_soldier_id,int a_base_send_soldier_type,int a_base_synthesis_num,int a_base_synthesis_numMax,int a_base_soldier_star,int a_base_soldier_probability,int a_base_starlevel_num,int a_base_buff)
 {
   this.id = id;

@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 public class Cfg_t_vip_s_Info
 {
-public int id;
-public int a_base_vip_level;
-public int a_base_deplete_exp;
-public string a_arrayints_vip_privilege;
-public string a_arrayints_battle_buff;
-public string a_ints_vip_freeaward;
-public string a_ints_vip_limitaward;
-public string a_ints_vip_limitaward_price;
+	public int id;
+	public int a_base_vip_level;
+	public int a_base_deplete_exp;
+	public string a_arrayints_vip_privilege;
+	public string a_arrayints_battle_buff;
+	public string a_ints_vip_freeaward;
+	public string a_ints_vip_limitaward;
+	public string a_ints_vip_limitaward_price;
 public Cfg_t_vip_s_Info(int id,int a_base_vip_level,int a_base_deplete_exp,string a_arrayints_vip_privilege,string a_arrayints_battle_buff,string a_ints_vip_freeaward,string a_ints_vip_limitaward,string a_ints_vip_limitaward_price)
 {
   this.id = id;

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 public class Cfg_t_pass_s_Info
 {
-public int id;
-public int a_base_pass_id;
-public int a_base_pass_exp;
-public string a_base_jump_level;
+	public int id;
+	public int a_base_pass_id;
+	public int a_base_pass_exp;
+	public string a_base_jump_level;
 public Cfg_t_pass_s_Info(int id,int c_e_name_id,int a_base_conditional_rewards,int a_base_activity,int a_base_type,int a_base_pass_level,int a_base_task_days,int a_base_attendance_month,string a_arrayints_unlock_conditions,string a_arrayints_claim_conditions,string a_arrayints_award,string c_ints_task_jump,int a_base_special_reward,int a_base_receive,int a_base_packs_type,string a_arrayints_duration,string a_base_open_packs,string a_base_close_packs,int c_base_showint id,int a_base_pass_id,int a_base_pass_exp,string a_base_jump_level)
 {
   this.id = id;

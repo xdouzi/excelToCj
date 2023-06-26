@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 public class Cfg_t_commodity_s_Info
 {
-public int id;
-public int a_base_commodity;
-public int a_base_weight;
-public string a_ints_item;
-public string a_ints_price;
-public int a_base_buy_second;
-public string a_arrayints_discount_show;
-public string a_arrayints_condition;
-public int a_base_time_type;
-public string a_ints_time_scope;
+	public int id;
+	public int a_base_commodity;
+	public int a_base_weight;
+	public string a_ints_item;
+	public string a_ints_price;
+	public int a_base_buy_second;
+	public string a_arrayints_discount_show;
+	public string a_arrayints_condition;
+	public int a_base_time_type;
+	public string a_ints_time_scope;
 public Cfg_t_commodity_s_Info(int id,int a_base_commodity,int a_base_weight,string a_ints_item,string a_ints_price,int a_base_buy_second,string a_arrayints_discount_show,string a_arrayints_condition,int a_base_time_type,string a_ints_time_scope)
 {
   this.id = id;

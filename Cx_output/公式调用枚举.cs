@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 public class Cfg_公式调用枚举_Info
 {
-public string 1;
-public string 2;
-public string 3;
-public string 4;
-public string 5;
-public string 6;
-public string 7;
-public string 8;
-public string 9;
-public string 10;
-public string 11;
-public string 12;
+	public string 1;
+	public string 2;
+	public string 3;
+	public string 4;
+	public string 5;
+	public string 6;
+	public string 7;
+	public string 8;
+	public string 9;
+	public string 10;
+	public string 11;
+	public string 12;
 public Cfg_公式调用枚举_Info(string 1,string 2,string 3,string 4,string 5,string 6,string 7,string 8,string 9,string 10,string 11,string 12)
 {
   this.1 = 1;
