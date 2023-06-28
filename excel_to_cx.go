@@ -51,7 +51,7 @@ func main() {
 	fmt.Printf("--第五行 字段属性使用介绍\n")
 	fmt.Printf("--第六行 配置第一行数据开始\n")
 	fmt.Printf("added by yh @ 2023/6/25 17:35 408309839@qq.com \n")
-
+	fmt.Printf("\n")
 	for _, fileName := range fileNames {
 		if filepath.Ext(fileName) == ".xlsx" {
 			filePath := filepath.Join(dirPath, fileName)
