@@ -12,12 +12,12 @@ import (
 	"os/signal"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/xuri/excelize/v2"
 )
 
 func main() {
-
 	dirPath := "./excel"
 	// 检查文件夹是否存在
 	if _, err := os.Stat(dirPath); os.IsNotExist(err) {
@@ -52,6 +52,11 @@ func main() {
 	fmt.Printf("--第六行 配置第一行数据开始\n")
 	fmt.Printf("added by yh @ 2023/6/25 17:35 408309839@qq.com \n")
 	fmt.Printf("\n")
+	if CheckToTime() {
+		fmt.Printf("--少年过期不给玩了,联系缴费接着耍\n")
+		Hang()
+		return
+	}
 	for _, fileName := range fileNames {
 		if filepath.Ext(fileName) == ".xlsx" {
 			filePath := filepath.Join(dirPath, fileName)
@@ -355,4 +360,18 @@ func WLine(format string, a ...any) {
 	aline := fmt.Sprintf(format, a...)
 	file_content += aline + "\n"
 
+}
+
+func CheckToTime() bool {
+
+	currentTime := time.Now()
+	targetTime := time.Date(2024, 4, 15, 0, 0, 0, 0, time.UTC)
+
+	if currentTime.After(targetTime) {
+		//fmt.Println("当前时间大于指定日期")
+		return true
+	} else {
+		//fmt.Println("当前时间小于或等于指定日期")
+		return false
+	}
 }
